@@ -1,2 +1,3 @@
 # SafariNext
-Next App template. Part of the SafariLib project. 
+
+The SafariNext project is a collection of helpers for build Web Applications using NextJS.

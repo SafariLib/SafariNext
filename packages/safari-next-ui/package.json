@@ -1,0 +1,60 @@
+{
+    "name": "@safari-next/ui",
+    "author": "BenoitSafari",
+    "description": "React Components library for Safari applications.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/SafariLib/safari-next#readme",
+    "type": "module",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.ts",
+    "readme": "README.md",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "README.md",
+        "LICENSE",
+        "dist"
+    ],
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SafariLib/safari-next.git"
+    },
+    "keywords": [
+        "ui",
+        "component",
+        "library"
+    ],
+    "scripts": {
+        "build": "tsc --project tsconfig.json && vite build",
+        "build:storybook": "storybook build",
+        "test": "vitest",
+        "lint": "eslint .",
+        "storybook": "storybook dev -p 6006",
+        "deploy": "pnpm build && npm publish --access public"
+    },
+    "devDependencies": {
+        "@fontsource-variable/jetbrains-mono": "^5.0.21",
+        "@fontsource-variable/noto-emoji": "^5.0.20",
+        "@fontsource-variable/roboto-serif": "^5.0.14",
+        "@fontsource/noto-color-emoji": "^5.0.27",
+        "@fontsource/roboto": "^5.0.13",
+        "@fontsource/roboto-mono": "^5.0.18",
+        "@storybook/addon-essentials": "^8.1.11",
+        "@storybook/addon-links": "^8.1.11",
+        "@storybook/blocks": "^8.1.11",
+        "@storybook/react": "^8.1.11",
+        "@storybook/react-vite": "^8.1.11",
+        "@storybook/test": "^8.1.11",
+        "storybook": "^8.1.11"
+    }
+}
