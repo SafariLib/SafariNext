@@ -1,7 +1,6 @@
 <p align="center">
-    <img width="200" src="https://raw.githubusercontent.com/SafariLib/.github/main/assets/logo.png" alt="SafariUI logo">
+    <img width="300" src=".assets/logo-v1_full.svg">
 </p>
-<h1 align="center">safaridigital.fr/app</h1>
 <div align="center">
     <a href="https://github.com/SafariLib"><img src="https://img.shields.io/badge/SafariLib-yellow.svg"></a>
     <a href="https://puckeditor.com/docs"><img src="https://img.shields.io/badge/PUCK-0.15-white.svg"></a>
