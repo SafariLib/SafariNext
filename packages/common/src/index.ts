@@ -1,1 +1,1 @@
-export { default as SnButton, type SnButtonProps } from './components/SnButton/SnButton';
+export { default as SnButton, type SdButtonProps } from './components/SdButton/SdButton';

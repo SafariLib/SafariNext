@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import component from './SnButton';
+import component from './SdButton';
 
-const meta: Meta = { title: 'Button/SnButton', component };
+const meta: Meta = { title: 'Button/SdButton', component };
 type Story = StoryObj<typeof meta>;
 export default meta;
 

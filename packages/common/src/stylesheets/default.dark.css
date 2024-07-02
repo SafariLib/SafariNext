@@ -1,0 +1,5 @@
+[data-theme='dark'] {
+    --palette-primary: #eda600;
+    --palette-text: #f0f0f0;
+    --palette-text-disabled: #707070;
+}

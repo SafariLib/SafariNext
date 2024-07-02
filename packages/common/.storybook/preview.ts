@@ -1,5 +1,6 @@
 import { Preview } from '@storybook/react';
 import './fontsources';
+import '../src/stylesheets/default.light.css';
 
 const preview: Preview = {
     parameters: {
