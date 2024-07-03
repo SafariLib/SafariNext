@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import component from './SdButton';
 
-const meta: Meta = { title: 'Button/SdButton', component };
+const meta: Meta = { title: 'Inputs/SdButton', component };
 type Story = StoryObj<typeof meta>;
 export default meta;
 
@@ -16,9 +16,6 @@ export const Primary: Story = {
         disabled: {
             control: { type: 'boolean' },
         },
-        selected: {
-            control: { type: 'boolean' },
-        },
         fullWidth: {
             control: { type: 'boolean' },
         },
@@ -31,8 +28,25 @@ export const Primary: Story = {
         variant: 'primary',
         children: 'Primary Button',
         disabled: false,
-        selected: false,
         loading: false,
         fullWidth: false,
     },
+};
+
+export const Secondary: Story = {
+    args: {
+        ...Primary.args,
+        variant: 'secondary',
+        children: 'Secondary Button',
+    },
+    argTypes: Primary.argTypes,
+};
+
+export const Text: Story = {
+    args: {
+        ...Primary.args,
+        variant: 'text',
+        children: 'Text Button',
+    },
+    argTypes: Primary.argTypes,
 };

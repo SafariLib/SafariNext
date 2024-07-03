@@ -1,3 +1,5 @@
+'use client';
+
 import './styles.css';
 import React from 'react';
 import { repeatElement, useProps } from '../../utils/element';

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import component from './SdLoader';
 
-const meta: Meta = { title: 'Loader/SdLoader', component };
+const meta: Meta = { title: 'Loaders/SdLoader', component };
 type Story = StoryObj<typeof meta>;
 export default meta;
 
