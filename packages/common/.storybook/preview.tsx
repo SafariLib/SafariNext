@@ -1,8 +1,8 @@
 import { Preview, StoryFn } from '@storybook/react';
 import './fontsources';
-import '../src/stylesheets/default.font.css';
-import '../src/stylesheets/default.light.css';
-import '../src/stylesheets/default.dark.css';
+import '../stylesheets/default.font.css';
+import '../stylesheets/default.light.css';
+import '../stylesheets/default.dark.css';
 import React from 'react';
 
 const Decorator = (Story: StoryFn) => {

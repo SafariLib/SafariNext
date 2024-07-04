@@ -21,9 +21,8 @@ export default defineConfig({
         },
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: '@safari-next/ui',
+            fileName: (format, filename) => `${filename}.js`,
             formats: ['es'],
-            fileName: format => `index.${format}.js`,
         },
     },
     test: {

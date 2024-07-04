@@ -1,10 +1,16 @@
+'use client';
 import Image from 'next/image';
 import styles from './styles.page.module.css';
+import { SdButton } from '@safaridigital/common';
+import '@safaridigital/common/style.css';
+import '@safaridigital/common/default.font.css';
+import '@safaridigital/common/default.light.css';
+import '@safaridigital/common/default.dark.css';
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <button onClick={() => console.log()}></button>
+            <SdButton onClick={() => console.log()}>MDR</SdButton>
             <div className={styles.description}>
                 <p>
                     Get started by editing&nbsp;

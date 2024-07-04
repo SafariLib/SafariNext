@@ -1,0 +1,304 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles.page.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_page_main__28Kk0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.styles_page_description__zmyKH {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.styles_page_description__zmyKH a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.styles_page_description__zmyKH p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+.styles_page_code__eZzZc {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.styles_page_grid__qt3_X {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}
+
+.styles_page_card___2NTp {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.styles_page_card___2NTp span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.styles_page_card___2NTp h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.styles_page_card___2NTp p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+.styles_page_center__KZ6MF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.styles_page_center__KZ6MF::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.styles_page_center__KZ6MF::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.styles_page_center__KZ6MF::before,
+.styles_page_center__KZ6MF::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.styles_page_logo__HzsrM {
+  position: relative;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .styles_page_card___2NTp:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .styles_page_card___2NTp:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .styles_page_card___2NTp:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .styles_page_content__JJkH3 {
+    padding: 4rem;
+  }
+
+  .styles_page_grid__qt3_X {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .styles_page_card___2NTp {
+    padding: 1rem 2.5rem;
+  }
+
+  .styles_page_card___2NTp h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .styles_page_center__KZ6MF {
+    padding: 8rem 0 6rem;
+  }
+
+  .styles_page_center__KZ6MF::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .styles_page_description__zmyKH {
+    font-size: 0.8rem;
+  }
+
+  .styles_page_description__zmyKH a {
+    padding: 1rem;
+  }
+
+  .styles_page_description__zmyKH p,
+  .styles_page_description__zmyKH div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .styles_page_description__zmyKH p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+  }
+
+  .styles_page_description__zmyKH div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .styles_page_grid__qt3_X {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .styles_page_vercelLogo___z8sG {
+    filter: invert(1);
+  }
+
+  .styles_page_logo__HzsrM {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes styles_page_rotate__oO251 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!../common/dist/style.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.SdButton{display:flex;align-items:center;justify-content:center;box-sizing:border-box;cursor:pointer;position:relative;white-space:nowrap;min-width:5rem;min-height:1.8125rem;padding:.25rem 1rem;border:1px solid;border-radius:.25rem;color:inherit;transition:all .3s ease}.SdButton .SdLoader{position:absolute;left:50%;top:16.666%;transform:translate(-50%,-50%)}button.SdButton{-webkit-user-select:none;-moz-user-select:none;user-select:none}.SdButton-fullWidth{width:100%}.SdButton-disabled{pointer-events:none;cursor:default}.SdButton-loading{cursor:default;pointer-events:none}.SdButton-loading .SdLoader{position:absolute;top:36%}.SdButton-loading .SdButton-content{opacity:0}.SdButton-variant-primary{background-color:var(--palette-primary);border-color:var(--palette-primary)}.SdButton-variant-primary:hover{background-color:var(--palette-primary-light);border-color:var(--palette-primary-light)}.SdButton-variant-primary.SdButton-disabled{background-color:var(--palette-background-disabled);border-color:var(--palette-background-disabled);color:var(--palette-text-disabled)}.SdButton-variant-secondary{background-color:transparent;border-color:var(--palette-primary)}.SdButton-variant-secondary:hover{border-color:var(--palette-primary-light);color:var(--palette-primary-light)}.SdButton-variant-secondary.SdButton-disabled{border-color:var(--palette-text-disabled);color:var(--palette-text-disabled)}.SdButton-variant-text{border-color:transparent;background-color:transparent}.SdButton-variant-text:hover{color:var(--palette-primary-light)}.SdButton-variant-text.SdButton-disabled{color:var(--palette-text-disabled)}.SdLoader,.SdLoader>div{box-sizing:border-box}.SdLoader{display:inline-block;position:relative;width:var(--size-block)}.SdLoader div{position:absolute;width:var(--size-dot);height:var(--size-dot);border-radius:50%;background:var(--color);animation-timing-function:cubic-bezier(0,1,1,0)}.SdLoader div:nth-of-type(1){left:var(--left-1);animation:ellipsis1 .6s infinite}.SdLoader div:nth-of-type(2){left:var(--left-1);animation:ellipsis2 .6s infinite}.SdLoader div:nth-of-type(3){left:var(--left-2);animation:ellipsis2 .6s infinite}.SdLoader div:nth-of-type(4){left:var(--left-3);animation:ellipsis3 .6s infinite}@keyframes ellipsis1{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes ellipsis2{0%{transform:translate(0)}to{transform:translate(var(--translate))}}@keyframes ellipsis3{0%{transform:scale(1)}to{transform:scale(0)}}.SdLoader-color-primary{--color: var(--palette-primary)}.SdLoader-color-text{--color: var(--palette-text)}.SdLoader-color-disabled{--color: var(--palette-text-disabled)}.SdLoader-size-small{--size-block: 40px;--size-dot: 6.66667px;--left-1: 4px;--left-2: 16px;--left-3: 28px;--translate: 12px}.SdLoader-size-medium{--size-block: 60px;--size-dot: 10px;--left-1: 6px;--left-2: 24px;--left-3: 42px;--translate: 18px}.SdLoader-size-large{--size-block: 80px;--size-dot: 13.33333px;--left-1: 8px;--left-2: 32px;--left-3: 56px;--translate: 24px}.SdSwitch-input,.SdSwitch-label,.SdSwitch-slider{--switch-duration: .4s;--switch-width: 33px;--switch-height: 16px;--switch-slider-size: 12px;--switch-spacing: 2px;--switch-translate: 17px;--switch-border: 1px solid;height:var(--switch-height)}.SdSwitch-label{cursor:pointer;display:inline-block;position:relative;width:var(--switch-width);height:var(--switch-height)}.SdSwitch-input{opacity:0;width:0;height:0}.SdSwitch-input:checked+.SdSwitch-slider{background-color:var(--palette-primary)}.SdSwitch-input:checked+.SdSwitch-slider:before{transform:translate(var(--switch-translate))}.SdSwitch-slider{position:absolute;top:0;left:0;right:0;bottom:0;box-sizing:border-box;background-color:var(--palette-background-disabled);border-radius:50px;transition:var(--switch-duration);box-shadow:inset 0 0 12px var(--palette-shadow-light);-webkit-box-shadow:inset 0 0 calc(var(--text-size) * .55) var(--palette-shadow-light)}.SdSwitch-slider:before{position:absolute;left:var(--switch-spacing);bottom:var(--switch-spacing);content:"";box-sizing:border-box;height:var(--switch-slider-size);width:var(--switch-slider-size);background-color:#fff;border-radius:50%;transition:var(--switch-duration)}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!../common/dist/default.font.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+    --text-font: 'Roboto', monospace;
+    --text-weight-regular: 400;
+    --text-weight-medium: 500;
+    --text-weight-bold: 700;
+    --text-size: 16px;
+    --text-size-caption: 12px;
+    --text-letter-spacing: 0.0375rem;
+}
+
+p, h1, h2, h3, h4, h5, h6,
+span, a, button, input,
+select, textarea {
+    font-family: var(--text-font), monospace;
+    font-weight: var(--text-weight-regular);
+    font-size: var(--text-size);
+    letter-spacing: var(--text-letter-spacing);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    letter-spacing: calc(var(--text-letter-spacing) * 3.5);
+    font-size: 1.5rem;
+}
+
+h2 {
+    letter-spacing: calc(var(--text-letter-spacing) * 3);
+    font-size: 1.275rem;
+}
+
+h3 {
+    letter-spacing: calc(var(--text-letter-spacing) * 2.5);
+    font-size: 1.075rem;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!../common/dist/default.light.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+    --palette-primary: #eda600;
+    --palette-primary-light: #ffcf33;
+    --palette-text: #222222;
+    --palette-text-disabled: #707070;
+    --palette-background-disabled: #c0c0c0;
+    --palette-paper: #f0f0f0;
+    --palette-shadow: #00000050;
+    --palette-shadow-light: #00000020;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!../common/dist/default.dark.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+[data-theme='dark'] {
+    --palette-primary: #eda600;
+    --palette-primary-light: #ffcf33;
+    --palette-text: #f0f0f0;
+    --palette-text-disabled: #707070;
+    --palette-background-disabled: #353535;
+    --palette-paper: #222222;
+    --palette-shadow: #00000050;
+    --palette-shadow-light: #00000020;
+}
