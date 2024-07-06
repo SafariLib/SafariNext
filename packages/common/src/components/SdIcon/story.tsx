@@ -5,18 +5,30 @@ import type { SdIconProps } from './types';
 
 const meta: Meta<SdIconProps> = {
     title: 'Icons/SdIcon',
-    decorators: (_, { args }) => (
-        <div style={{ display: 'flex', gap: '1rem' }}>
-            {Object.values(component).map((Icon, i) => (
-                <Icon key={i} {...args} />
-            ))}
-        </div>
-    ),
+    decorators: (_, { args }) =>
+        args.fullWidth ? (
+            <div
+                style={{
+                    width: '100px',
+                    height: '100px',
+                    border: '1px solid red',
+                    resize: 'both',
+                    overflow: 'hidden',
+                }}>
+                <component.AccountIcon {...args} />
+            </div>
+        ) : (
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                {Object.values(component).map((Icon, i) => (
+                    <Icon key={i} {...args} />
+                ))}
+            </div>
+        ),
 };
 type Story = StoryObj<typeof meta>;
 export default meta;
 
-export const Primary: Story = {
+export const Small: Story = {
     argTypes: {
         variant: {
             control: { type: 'select' },
@@ -44,9 +56,33 @@ export const Primary: Story = {
     args: {
         color: 'text',
         variant: 'filled',
-        size: 'medium',
+        size: 'small',
         direction: 'up',
         animation: false,
         fullWidth: false,
     },
+};
+
+export const Medium: Story = {
+    args: {
+        ...Small.args,
+        size: 'medium',
+    },
+    argTypes: Small.argTypes,
+};
+
+export const Large: Story = {
+    args: {
+        ...Small.args,
+        size: 'large',
+    },
+    argTypes: Small.argTypes,
+};
+
+export const FullWidth: Story = {
+    args: {
+        ...Small.args,
+        fullWidth: true,
+    },
+    argTypes: Small.argTypes,
 };

@@ -38,19 +38,19 @@
     --icon-size: 100%;
 }
 
-.SdIcon-direction-up {
+.SdIcon[direction="up"] {
     --icon-transform: rotate(360deg);
 }
 
-.SdIcon-direction-down {
+.SdIcon[direction="down"] {
     --icon-transform: rotate(180deg);
 }
 
-.SdIcon-direction-left {
+.SdIcon[direction="left"] {
     --icon-transform: rotate(270deg);
 }
 
-.SdIcon-direction-right {
+.SdIcon[direction="right"] {
     --icon-transform: rotate(90deg);
 }
 
