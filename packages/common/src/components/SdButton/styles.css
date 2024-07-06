@@ -27,7 +27,7 @@ button.SdButton {
     user-select: none;
 }
 
-.SdButton-fullWidth {
+.SdButton-fullwidth {
     width: 100%;
 }
 

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import type { SdIconProps } from '../types';
 import SdBaseIcon from '../SdBaseIcon';

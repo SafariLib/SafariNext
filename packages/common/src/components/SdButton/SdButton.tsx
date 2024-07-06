@@ -9,7 +9,7 @@ export interface SdButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElem
     variant?: SnButtonVariant | undefined;
     loading?: boolean | undefined;
     disabled?: boolean | undefined;
-    fullWidth?: boolean | undefined;
+    fullwidth?: boolean | undefined;
     href?: string | undefined;
 }
 

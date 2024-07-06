@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react';
 import React from 'react';
+import { convertToHtmlAttributes } from './element';
 
 export default function usePropsMapper<T extends (Partial<unknown> & React.Attributes) & PropsWithChildren>(
     { children: childFromProps, ...props }: T,
@@ -8,8 +9,9 @@ export default function usePropsMapper<T extends (Partial<unknown> & React.Attri
     return React.useMemo(
         () =>
             React.Children.map(children ?? childFromProps, c =>
-                React.isValidElement(c) ? React.cloneElement(c, { ...props }) : c,
+                React.isValidElement(c) ? React.cloneElement(c, { ...convertToHtmlAttributes(props) }) : c,
             ),
         [props, children, childFromProps],
     );
 }
+

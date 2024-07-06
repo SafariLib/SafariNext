@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest';
 import { resolveClass } from './classNames';
+import { convertToHtmlAttributes } from '../element';
 
 test('resolveClass(): With Classes and props, should return the correct className', () => {
     const base = 'SdButton';
@@ -8,7 +9,7 @@ test('resolveClass(): With Classes and props, should return the correct classNam
         loading: true,
         disabled: false,
         selected: true,
-        fullWidth: false,
+        fullwidth: false,
         onClick: () => void 0,
     };
     const result = resolveClass(base, props);
@@ -33,4 +34,10 @@ test('resolveClass(): With undefined props, should return the correct className'
     const base = 'SdButton';
     const result = resolveClass(base, undefined);
     expect(result).toBe('SdButton');
+});
+
+test('convertToHtmlAttributes(): with booleans should convert values to strings', () => {
+    const props = { disabled: true, visible: false, id: 'button-1' };
+    const expected = { disabled: 'true', visible: 'false', id: 'button-1' };
+    expect(convertToHtmlAttributes(props)).toEqual(expected);
 });

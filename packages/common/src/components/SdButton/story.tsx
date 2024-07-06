@@ -16,7 +16,7 @@ export const Primary: Story = {
         disabled: {
             control: { type: 'boolean' },
         },
-        fullWidth: {
+        fullwidth: {
             control: { type: 'boolean' },
         },
         variant: {
@@ -29,7 +29,7 @@ export const Primary: Story = {
         children: 'Primary Button',
         disabled: false,
         loading: false,
-        fullWidth: false,
+        fullwidth: false,
     },
 };
 

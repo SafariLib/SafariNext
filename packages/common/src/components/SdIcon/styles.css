@@ -6,6 +6,10 @@
     --icon-size: 1rem;
 }
 
+.SdIcon-action {
+    cursor: pointer;
+}
+
 .SdIcon-animation {
     --icon-transition: 0.4s;
 }
@@ -34,7 +38,7 @@
     --icon-size: calc((var(--text-size) * 3));
 }
 
-.SdIcon-fullWidth {
+.SdIcon-fullwidth {
     --icon-size: 100%;
 }
 

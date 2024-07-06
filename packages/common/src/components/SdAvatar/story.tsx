@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { SdIcon as component } from './index';
-import type { SdIconProps } from './types';
+import type { SdAvatarProps } from './SdAvatar';
+import Component from './SdAvatar';
 
-const meta: Meta<SdIconProps> = {
-    title: 'Icons/SdIcon',
+const meta: Meta<SdAvatarProps> = {
+    title: 'Images/Avatar',
     decorators: (_, { args }) =>
         args.fullwidth ? (
             <div
@@ -15,14 +15,10 @@ const meta: Meta<SdIconProps> = {
                     resize: 'both',
                     overflow: 'hidden',
                 }}>
-                <component.AccountIcon {...args} />
+                <Component {...args} />
             </div>
         ) : (
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                {Object.values(component).map((Icon, i) => (
-                    <Icon key={i} {...args} />
-                ))}
-            </div>
+            <Component {...args} onClick={() => console.log('lol')} />
         ),
 };
 type Story = StoryObj<typeof meta>;
@@ -30,10 +26,6 @@ export default meta;
 
 export const Small: Story = {
     argTypes: {
-        variant: {
-            control: { type: 'select' },
-            options: ['filled', 'outlined'],
-        },
         color: {
             control: { type: 'select' },
             options: ['primary', 'disabled', 'text'],
@@ -42,24 +34,18 @@ export const Small: Story = {
             control: { type: 'select' },
             options: ['small', 'medium', 'large'],
         },
-        direction: {
-            control: { type: 'select' },
-            options: ['up', 'down', 'left', 'right'],
-        },
-        animation: {
-            control: { type: 'boolean' },
-        },
         fullwidth: {
             control: { type: 'boolean' },
+        },
+        src: {
+            control: { type: 'text' },
         },
     },
     args: {
         color: 'text',
-        variant: 'filled',
         size: 'small',
-        direction: 'up',
-        animation: false,
         fullwidth: false,
+        src: '',
     },
 };
 

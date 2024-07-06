@@ -16,10 +16,12 @@ import { GearIcon } from './icons/GearIcon';
 import { FolderIcon } from './icons/FolderIcon';
 import { FileIcon } from './icons/FileIcon';
 import { EyeSlashedIcon } from './icons/EyeSlashedIcon';
+import { CircleIcon } from './icons/CircleIcon';
 
 export const SdIcon = Object.assign(Component, {
     AccountIcon,
     ArrowIcon,
+    CircleIcon,
     EllipsisIcon,
     EyeIcon,
     EyeSlashedIcon,
