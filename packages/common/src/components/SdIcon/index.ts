@@ -18,6 +18,8 @@ import { FileIcon } from './icons/FileIcon';
 import { EyeSlashedIcon } from './icons/EyeSlashedIcon';
 import { CircleIcon } from './icons/CircleIcon';
 
+export { type SdIconProps } from './types';
+
 export const SdIcon = Object.assign(Component, {
     AccountIcon,
     ArrowIcon,

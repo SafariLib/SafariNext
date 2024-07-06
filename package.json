@@ -1,7 +1,8 @@
 {
     "author": "BenoitSafari",
     "scripts": {
-        "dev:common": "pnpm --dir .\\packages\\common run storybook"
+        "dev:common": "pnpm --dir .\\packages\\common run storybook",
+        "build:common": "pnpm --dir .\\packages\\common run build"
     },
     "devDependencies": {
         "@testing-library/dom": "^10.3.1",
