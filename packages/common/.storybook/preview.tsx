@@ -28,10 +28,6 @@ const preview: Preview = {
                 date: /Date$/,
             },
         },
-        darkMode: {
-            dark: { class: 'dark' },
-            light: { class: 'light' },
-        },
         layout: 'fullscreen',
         options: {
             storySort: {

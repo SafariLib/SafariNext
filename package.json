@@ -1,9 +1,14 @@
 {
     "author": "BenoitSafari",
+    "scripts": {
+        "dev:common": "pnpm --dir .\\packages\\common run storybook"
+    },
     "devDependencies": {
+        "@testing-library/dom": "^10.3.1",
+        "@testing-library/react": "^16.0.0",
         "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
         "@typescript-eslint/eslint-plugin": "^7.14.1",
         "@typescript-eslint/parser": "^7.14.1",
         "eslint": "^8",
@@ -17,13 +22,13 @@
         "typescript": "^5"
     },
     "dependencies": {
-        "next": "14.2.4",
-        "react": "^18",
-        "react-dom": "^18",
         "@fontsource-variable/noto-emoji": "^5.0.20",
         "@fontsource-variable/roboto-serif": "^5.0.14",
         "@fontsource/noto-color-emoji": "^5.0.27",
         "@fontsource/roboto": "^5.0.13",
-        "@fontsource/roboto-mono": "^5.0.18"
+        "@fontsource/roboto-mono": "^5.0.18",
+        "next": "14.2.4",
+        "react": "^18",
+        "react-dom": "^18"
     }
 }
