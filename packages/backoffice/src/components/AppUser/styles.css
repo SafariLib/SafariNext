@@ -1,0 +1,25 @@
+.AppUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+
+    & span {
+        user-select: none;
+        display: block;
+    }
+}
+
+.AppUser-size-small span {
+    font-size: 1rem;
+}
+
+.AppUser-size-medium span {
+    font-size: 1.1rem;
+}
+
+.AppUser-size-large span {
+    font-size: 1.3rem;
+}
+

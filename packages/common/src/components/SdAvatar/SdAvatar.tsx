@@ -5,7 +5,7 @@ import React, { useMemo } from 'react';
 import { useProps, usePropsMapper } from '../../utils/element';
 import { SdIcon } from '../SdIcon';
 import './styles.css';
-import useImageValidation from '../../utils/url/useImageValidation';
+import { useImageValidation } from '../../utils/url';
 
 export interface SdAvatarProps {
     src?: string;

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import './fontsources';
+import '@safaridigital/common/style.css';
+import '@safaridigital/common/default.font.css';
+import '@safaridigital/common/default.light.css';
+import '@safaridigital/common/default.dark.css';
 import './styles.globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Backoffice - safaridigital.fr',
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body>{children}</body>
         </html>
     );
 }

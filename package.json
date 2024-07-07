@@ -2,6 +2,7 @@
     "author": "BenoitSafari",
     "scripts": {
         "dev:common": "pnpm --dir .\\packages\\common run storybook",
+        "dev:backoffice": "pnpm --dir .\\packages\\backoffice run dev",
         "build:common": "pnpm --dir .\\packages\\common run build"
     },
     "devDependencies": {
