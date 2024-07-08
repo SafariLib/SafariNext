@@ -12,6 +12,7 @@ import { MemberLockedIcon } from './icons/MemberLockedIcon';
 import { MemberIcon } from './icons/MemberIcon';
 import { MemberAlertIcon } from './icons/MemberAlertIcon';
 import { MemberAddIcon } from './icons/MemberAddIcon';
+import { MenuIcon } from './icons/MenuIcon';
 import { GearIcon } from './icons/GearIcon';
 import { FolderIcon } from './icons/FolderIcon';
 import { FileIcon } from './icons/FileIcon';
@@ -36,6 +37,7 @@ export const SdIcon = Object.assign(Component, {
     MemberLockedIcon,
     MemberRemoveIcon,
     MembersIcon,
+    MenuIcon,
     SearchIcon,
     ThemeMoonIcon,
     ThemeSunIcon,
