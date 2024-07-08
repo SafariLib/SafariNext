@@ -1,7 +1,7 @@
 import './styles.css';
 import { EUserRole } from '@/models';
 import UserMenu from '@components/AppBar/components/UserMenu';
-import SettingsMenu from '@components/AppBar/components/SettingsMenu';
+import SettingsAction from '@components/AppBar/components/SettingsAction';
 import type { PropsWithChildren } from 'react';
 
 const fakeUser = {
@@ -24,7 +24,7 @@ function Actions() {
     return (
         <div className={'AppBar-actions'}>
             <UserMenu {...fakeUser} />
-            <SettingsMenu />
+            <SettingsAction />
         </div>
     );
 }

@@ -3,7 +3,11 @@
 import { SdButton, SdIcon, useTheme } from '@safaridigital/common';
 import React from 'react';
 
-export default function SettingsMenu() {
+export interface SettingsActionProps {
+    onClick?: () => void;
+}
+
+export default function SettingsAction() {
     const { theme, switchTheme } = useTheme();
 
     return (
