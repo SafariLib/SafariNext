@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import './styles.css';
 import { EUserRole } from '@/models';
 import UserMenu from '@components/AppBar/components/UserMenu';
 import SettingsMenu from '@components/AppBar/components/SettingsMenu';
@@ -13,7 +13,7 @@ const fakeUser = {
 };
 
 function AppBar(props: PropsWithChildren) {
-    return <header className={styles.AppBar}>{props.children}</header>;
+    return <header className="AppBar">{props.children}</header>;
 }
 
 function Title() {
@@ -22,7 +22,7 @@ function Title() {
 
 function Actions() {
     return (
-        <div className={styles['AppBar-actions']}>
+        <div className={'AppBar-actions'}>
             <UserMenu {...fakeUser} />
             <SettingsMenu />
         </div>

@@ -13,7 +13,7 @@ export interface SdButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElem
     href?: string | undefined;
 }
 
-export type SnButtonVariant = 'primary' | 'secondary' | 'text';
+export type SnButtonVariant = 'primary' | 'secondary' | 'text' | 'icon';
 
 export default function SdButton({ children, variant = 'primary', ...props }: SdButtonProps) {
     const resolved = useProps({ ...props, variant }, 'SdButton');

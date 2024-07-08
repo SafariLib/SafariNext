@@ -93,3 +93,22 @@ button.SdButton {
         color: var(--palette-text-disabled);
     }
 }
+
+.SdButton-variant-icon {
+    padding: 0.25rem;
+    min-width: 0;
+    min-height: 0;
+
+    line-height: .8rem;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+        background-color: var(--palette-background-disabled);
+    }
+
+    &.SdButton-disabled {
+        color: var(--palette-text-disabled);
+        opacity: 75%;
+    }
+}

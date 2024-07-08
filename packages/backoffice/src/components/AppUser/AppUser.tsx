@@ -2,7 +2,7 @@
 
 import './styles.css';
 import type { User } from '@/models';
-import { SdAvatar, useProps } from '@safaridigital/common';
+import { SdAvatar, SdButton, useProps } from '@safaridigital/common';
 
 export interface AppUserProps extends User {
     size?: 'small' | 'medium' | 'large';
@@ -16,7 +16,9 @@ export default function AppUser({ size = 'small', onClick, ...user }: AppUserPro
     return (
         <div className={resolved.className}>
             <span>{user?.username}</span>
-            <SdAvatar size={resolved.size} onClick={handleClick} />
+            <SdButton variant="icon" onClick={handleClick}>
+                <SdAvatar size={resolved.size} />
+            </SdButton>
         </div>
     );
 }
