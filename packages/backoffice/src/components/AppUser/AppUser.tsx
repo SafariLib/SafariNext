@@ -7,6 +7,7 @@ import { SdAvatar, SdButton, useProps } from '@safaridigital/common';
 export interface AppUserProps extends User {
     size?: 'small' | 'medium' | 'large';
     onClick?: (userId: string) => void;
+    selected?: boolean;
 }
 
 export default function AppUser({ size = 'small', onClick, ...user }: AppUserProps) {

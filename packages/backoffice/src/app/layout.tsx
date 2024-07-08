@@ -7,10 +7,11 @@ import '@safaridigital/common/default.dark.css';
 import './styles.globals.css';
 import React from 'react';
 import { Providers } from '@/app/providers';
+import { APP_DOMAIN, APP_NAME } from '@/config';
 
 export const metadata: Metadata = {
-    title: 'Backoffice - safaridigital.fr',
-    description: 'Safaridigital.fr backoffice',
+    title: APP_DOMAIN,
+    description: `${APP_DOMAIN} ${APP_NAME}`,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

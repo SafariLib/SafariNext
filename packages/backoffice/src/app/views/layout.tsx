@@ -1,24 +1,15 @@
 import type { Metadata } from 'next';
-import './fontsources';
-import '@safaridigital/common/style.css';
-import '@safaridigital/common/default.font.css';
-import '@safaridigital/common/default.light.css';
-import '@safaridigital/common/default.dark.css';
-import './styles.globals.css';
 import React from 'react';
-import { Providers } from '@/app/providers';
+import { APP_DOMAIN } from '@/config';
 
 export const metadata: Metadata = {
-    title: 'safaridigital.fr',
-    description: 'Safaridigital.fr backoffice',
+    title: `${APP_DOMAIN}/Views`,
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function ViewsLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body>
-                <Providers>{children}</Providers>
-            </body>
+            <body>{children}</body>
         </html>
     );
 }

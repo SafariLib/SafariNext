@@ -3,11 +3,11 @@
 import { AppUser } from '@/components';
 import type { User } from '@/models';
 
-export interface UserActionProps extends User {
+export interface UserProps extends User {
     onClick?: (userId: string) => void;
     selected?: boolean;
 }
 
-export default function UserAction(props: UserActionProps) {
+export default function User(props: UserProps) {
     return <AppUser {...props} />;
 }

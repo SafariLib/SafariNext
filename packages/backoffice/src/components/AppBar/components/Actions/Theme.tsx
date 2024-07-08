@@ -2,7 +2,7 @@
 
 import { SdButton, SdIcon, useTheme } from '@safaridigital/common';
 
-export default function ThemeAction() {
+export default function Theme() {
     const { theme, switchTheme } = useTheme();
 
     return (
