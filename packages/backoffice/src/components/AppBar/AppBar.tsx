@@ -1,11 +1,10 @@
 import './styles.css';
 import type { PropsWithChildren } from 'react';
-import { Actions } from './components/Actions';
 import { Location } from './components/Location';
-import { Navigation } from './components/Navigation';
+import { Actions } from './components/Actions';
 
 function AppBar(props: PropsWithChildren) {
     return <header className="AppBar">{props.children}</header>;
 }
 
-export default Object.assign(AppBar, { Navigation, Location, Actions });
+export default Object.assign(AppBar, { Location, Actions });

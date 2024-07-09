@@ -18,6 +18,7 @@ import { FolderIcon } from './icons/FolderIcon';
 import { FileIcon } from './icons/FileIcon';
 import { EyeSlashedIcon } from './icons/EyeSlashedIcon';
 import { CircleIcon } from './icons/CircleIcon';
+import { CloseIcon } from './icons/CloseIcon';
 
 export { type SdIconProps } from './types';
 
@@ -25,6 +26,7 @@ export const SdIcon = Object.assign(Component, {
     AccountIcon,
     ArrowIcon,
     CircleIcon,
+    CloseIcon,
     EllipsisIcon,
     EyeIcon,
     EyeSlashedIcon,

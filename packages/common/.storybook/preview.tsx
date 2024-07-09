@@ -1,5 +1,6 @@
 import { Preview, StoryFn } from '@storybook/react';
 import './fontsources';
+import '../stylesheets/default.spacing.css';
 import '../stylesheets/default.font.css';
 import '../stylesheets/default.light.css';
 import '../stylesheets/default.dark.css';

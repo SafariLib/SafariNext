@@ -7,3 +7,11 @@
     padding: .75rem 1rem;
     box-shadow: 0 2px 4px 0 var(--palette-shadow);
 }
+
+.AppBar > .AppBar-actions:first-child {
+    justify-content: left;
+}
+
+.AppBar > .AppBar-actions:last-child {
+    justify-content: right;
+}

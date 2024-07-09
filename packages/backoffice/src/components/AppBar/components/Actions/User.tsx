@@ -3,7 +3,7 @@
 import { AppUser } from '@/components';
 import type { User } from '@/models';
 
-export interface UserProps extends User {
+interface UserProps extends User {
     onClick?: (userId: string) => void;
     selected?: boolean;
 }

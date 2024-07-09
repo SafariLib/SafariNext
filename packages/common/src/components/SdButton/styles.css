@@ -11,7 +11,7 @@
     min-height: 1.8125rem;
     padding: 0.25rem 1rem;
     border: 1px solid;
-    border-radius: 0.25rem;
+    border-radius: var(--spacing-radius);
     color: inherit;
     transition: all 0.3s ease;
 

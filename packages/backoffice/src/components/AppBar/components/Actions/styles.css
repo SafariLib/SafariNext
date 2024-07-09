@@ -2,7 +2,23 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: right;
     align-items: center;
     gap: .375rem;
 }
+
+.AppBar-actions-navigation {
+    position: relative;
+    width: 100%;
+
+    & .SdButton {
+        border: solid 1px var(--palette-text);
+    }
+
+    & .SdLogo {
+        height: 2.475rem;
+        position: absolute;
+        top: -.2rem;
+        left: 2.75rem;
+    }
+}
+

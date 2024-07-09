@@ -2,7 +2,7 @@
 
 import { SdButton, SdIcon } from '@safaridigital/common';
 
-export interface SettingsProps {
+interface SettingsProps {
     onClick?: () => void;
     selected?: boolean;
 }

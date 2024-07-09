@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import React from 'react';
+import type React from 'react';
 import { APP_DOMAIN } from '@/config';
 
 export const metadata: Metadata = {
@@ -7,9 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function ViewsLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-    return (
-        <html lang="en">
-            <body>{children}</body>
-        </html>
-    );
+    return children;
 }
