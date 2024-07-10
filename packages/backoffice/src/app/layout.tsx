@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { type Metadata } from 'next';
 import './fontsources';
 import '@safaridigital/common/style.css';
 import '@safaridigital/common/default.font.css';
@@ -6,20 +6,23 @@ import '@safaridigital/common/default.spacing.css';
 import '@safaridigital/common/default.light.css';
 import '@safaridigital/common/default.dark.css';
 import './styles.globals.css';
-import React from 'react';
-import { Providers } from '@/app/providers';
-import { APP_DOMAIN, APP_NAME } from '@/config';
+import { type PropsWithChildren } from 'react';
+import { Providers } from './providers';
+import { APP_DOMAIN, APP_NAME } from '@config';
+import { Page } from '@components';
 
 export const metadata: Metadata = {
     title: APP_DOMAIN,
     description: `${APP_DOMAIN} ${APP_NAME}`,
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
     return (
         <html lang="en">
             <body>
-                <Providers>{children}</Providers>
+                <Page>
+                    <Providers>{children}</Providers>
+                </Page>
             </body>
         </html>
     );

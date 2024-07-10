@@ -1,8 +1,8 @@
 'use client';
 
 import { ThemeProvider } from '@safaridigital/common';
-import React from 'react';
+import type { PropsWithChildren } from 'react';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ children }: PropsWithChildren) {
     return <ThemeProvider>{children}</ThemeProvider>;
 }

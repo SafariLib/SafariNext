@@ -1,4 +1,4 @@
-import type { EUserRole } from '@/models/User/EUserRole';
+import type { EUserRole } from './EUserRole';
 
 export interface User {
     id: string;

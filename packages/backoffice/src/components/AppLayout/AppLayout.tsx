@@ -4,8 +4,8 @@ import './styles.css';
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import { AppBar } from '../AppBar';
-import { EUserRole } from '@models/User';
-import { AppDrawer } from '@components/AppDrawer';
+import { EUserRole } from '@models';
+import { AppDrawer } from '../AppDrawer';
 
 const fakeUser = {
     id: '1',

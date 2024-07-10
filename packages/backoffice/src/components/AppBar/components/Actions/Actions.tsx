@@ -3,7 +3,7 @@ import User from './User';
 import Settings from './Settings';
 import Theme from './Theme';
 import './styles.css';
-import Navigation from '@components/AppBar/components/Actions/Navigation';
+import Navigation from './Navigation';
 
 export interface ActionsProps extends PropsWithChildren {}
 

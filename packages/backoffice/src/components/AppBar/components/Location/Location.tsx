@@ -1,12 +1,9 @@
 'use client';
 
 import './styles.css';
-import { APP_DOMAIN } from '@/config';
+import { usePathname } from 'next/navigation';
 
 export default function Location() {
-    return (
-        <div className="AppBar-navigation-Location">
-            {window?.document?.title?.split?.(`${APP_DOMAIN}/`)?.[1]}
-        </div>
-    );
+    const pathname = usePathname();
+    return <div className="AppBar-navigation-Location">{pathname}</div>;
 }
