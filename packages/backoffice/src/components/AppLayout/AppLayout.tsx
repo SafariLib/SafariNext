@@ -4,7 +4,7 @@ import './styles.css';
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import { AppBar } from '../AppBar';
-import { EUserRole } from '@models';
+import { EUserRole } from '@/models';
 import { AppDrawer } from '../AppDrawer';
 
 const fakeUser = {

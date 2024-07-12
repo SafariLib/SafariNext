@@ -8,8 +8,8 @@ import '@safaridigital/common/default.dark.css';
 import './styles.globals.css';
 import { type PropsWithChildren } from 'react';
 import { Providers } from './providers';
-import { APP_DOMAIN, APP_NAME } from '@config';
-import { Page } from '@components';
+import { APP_DOMAIN, APP_NAME } from '@/config';
+import { Page } from '@/components';
 
 export const metadata: Metadata = {
     title: APP_DOMAIN,

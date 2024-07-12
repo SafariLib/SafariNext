@@ -1,9 +1,9 @@
 'use client';
 
 import './styles.css';
-import { usePathname } from 'next/navigation';
+import { usePageTitle } from '@/locales';
 
 export default function Location() {
-    const pathname = usePathname();
-    return <div className="AppBar-navigation-Location">{pathname}</div>;
+    const title = usePageTitle();
+    return <div className="AppBar-navigation-Location">{title}</div>;
 }

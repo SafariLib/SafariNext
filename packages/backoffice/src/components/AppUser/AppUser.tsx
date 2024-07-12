@@ -1,7 +1,7 @@
 'use client';
 
 import './styles.css';
-import type { User } from '@models';
+import type { User } from '@/models';
 import { SdAvatar, SdButton, useProps } from '@safaridigital/common';
 
 export interface AppUserProps extends User {
