@@ -1,9 +1,11 @@
-.AppDrawer {
+.Drawer {
     position: absolute;
     box-sizing: border-box;
+    left: unset !important;
+    right: unset !important;
     top: 0;
-    left: 0;
     bottom: 0;
+    z-index: 1001;
 
     margin: unset;
     padding: .75rem 1rem;
@@ -12,28 +14,19 @@
 
     color: var(--palette-text);
     background-color: var(--palette-paper);
-
     border: none;
+}
+
+.Drawer-direction-left {
+    left: 0 !important;
     border-top-right-radius: calc(var(--spacing-radius) * 2);
     border-bottom-right-radius: calc(var(--spacing-radius) * 2);
     box-shadow: 0 2px 4px 0 var(--palette-shadow);
 }
 
-.AppDrawer .AppDrawer-head {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-
-    & .SdButton {
-        border: solid 1px var(--palette-text);
-    }
-
-    & .SdLogo {
-        position: absolute;
-        left: 1rem;
-        top: .5rem;
-        height: 2.475rem;
-    }
+.Drawer-direction-right {
+    right: 0 !important;
+    border-top-left-radius: calc(var(--spacing-radius) * 2);
+    border-bottom-left-radius: calc(var(--spacing-radius) * 2);
+    box-shadow: 0 2px 4px 0 var(--palette-shadow);
 }

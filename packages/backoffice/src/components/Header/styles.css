@@ -1,4 +1,4 @@
-.AppBar {
+.Header {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -8,10 +8,10 @@
     box-shadow: 0 2px 4px 0 var(--palette-shadow);
 }
 
-.AppBar > .AppBar-actions:first-child {
+.Header > .Header-actions:first-child {
     justify-content: left;
 }
 
-.AppBar > .AppBar-actions:last-child {
+.Header > .Header-actions:last-child {
     justify-content: right;
 }

@@ -1,0 +1,32 @@
+.Drawer-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+    & .SdButton {
+        border: solid 1px var(--palette-text);
+    }
+
+    & .SdLogo {
+        position: absolute;
+        top: .5rem;
+        height: 2.475rem;
+    }
+}
+
+.Drawer-header-direction-left {
+    justify-content: flex-end;
+
+    & .SdLogo {
+        left: 1rem;
+    }
+}
+
+.Drawer-header-direction-right {
+    justify-content: flex-start;
+
+    & .SdLogo {
+        right: 1rem;
+    }
+}

@@ -8,7 +8,7 @@ import Navigation from './Navigation';
 export interface ActionsProps extends PropsWithChildren {}
 
 function Actions({ children }: ActionsProps) {
-    return <div className={'AppBar-actions'}>{children}</div>;
+    return <div className={'Header-actions'}>{children}</div>;
 }
 
 export default Object.assign(Actions, { Settings: Settings, User: User, Theme: Theme, Navigation });

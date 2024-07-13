@@ -8,7 +8,7 @@ interface NavigationProps {
 
 export default function Navigation(props: NavigationProps) {
     return (
-        <div className="AppBar-actions-navigation">
+        <div className="Header-actions-navigation">
             <SdButton variant="icon" {...props}>
                 <SdIcon.MenuIcon />
             </SdButton>
