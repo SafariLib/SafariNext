@@ -1,6 +1,7 @@
 import Component from './SdBaseIcon';
 import { AccountIcon } from './icons/AccountIcon';
 import { ArrowIcon } from './icons/ArrowIcon';
+import { BoxIcon } from './icons/BoxIcon';
 import { EllipsisIcon } from './icons/EllipsisIcon';
 import { EyeIcon } from './icons/EyeIcon';
 import { ThemeSunIcon } from './icons/ThemeSunIcon';
@@ -25,6 +26,7 @@ export { type SdIconProps } from './types';
 export const SdIcon = Object.assign(Component, {
     AccountIcon,
     ArrowIcon,
+    BoxIcon,
     CircleIcon,
     CloseIcon,
     EllipsisIcon,

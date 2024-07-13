@@ -1,6 +1,5 @@
 .Drawer {
     position: absolute;
-    box-sizing: border-box;
     left: unset !important;
     right: unset !important;
     top: 0;

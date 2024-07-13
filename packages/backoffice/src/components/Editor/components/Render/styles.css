@@ -1,0 +1,21 @@
+.Editor-render {
+    overflow: auto;
+    border: solid 1px;
+    border-color: var(--palette-text-disabled);
+}
+
+.Editor-render, .Editor-render #puck-preview, .Editor-render iframe {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#puck-preview {
+    overflow: hidden;
+}
+
+#puck-preview iframe {
+    overflow: scroll;
+}
