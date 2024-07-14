@@ -1,4 +1,4 @@
-const namedProps = ['loading', 'disabled', 'selected', 'fullwidth', 'animation'];
+const namedProps = ['loading', 'disabled', 'selected', 'fullwidth', 'animation', 'bold', 'italic'];
 const specialNamedProps = ['variant', 'color', 'size', 'direction'];
 
 const composeClassName = (...str: Array<string | undefined>) => str.filter(Boolean).join('-');

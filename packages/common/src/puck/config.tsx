@@ -1,21 +1,32 @@
-import type { Config } from '@measured/puck';
-import { SdButton } from '../components/SdButton';
-import { SdLogo } from '../components/SdLogo';
+import { type Config } from '@measured/puck';
+import { SdText } from '../components/SdText';
 import React from 'react';
+import { Page } from '../blocks';
 
 export const viewConfig: Config = {
+    categories: {
+        blocks: {
+            title: 'Blocks',
+            components: ['Page'],
+        },
+        typography: {
+            title: 'Typography',
+            components: ['Text'],
+        },
+    },
     components: {
-        Button: {
+        Page: {
+            render: ({ puck: { renderDropZone } }) => <Page>{renderDropZone({ zone: 'page-content' })}</Page>,
+        },
+        Text: {
             fields: {
-                children: {
-                    type: 'text',
+                content: {
+                    type: 'textarea',
                     label: 'Content',
                 },
             },
-            render: props => <SdButton {...props} />,
-        },
-        Logo: {
-            render: () => <SdLogo />,
+            render: ({ content }) => <SdText>{content}</SdText>,
         },
     },
 };
+

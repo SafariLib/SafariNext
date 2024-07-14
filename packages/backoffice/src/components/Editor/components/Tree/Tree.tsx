@@ -1,17 +1,17 @@
 'use client';
 
 import { Puck } from '@measured/puck';
+import { SdText, useProps } from '@safaridigital/common';
+import { t } from '@/locales';
 import './styles.css';
-import { useProps } from '@safaridigital/common';
 
-interface TreeProps {
-    disabled?: boolean;
-}
+interface TreeProps {}
 
 export default function Tree(props: TreeProps) {
     const resolvedProps = useProps(props, 'Editor-tree');
     return (
         <div {...resolvedProps}>
+            <SdText variant="caption">{t('editor:tools:tree:title')}</SdText>
             <Puck.Outline />
         </div>
     );

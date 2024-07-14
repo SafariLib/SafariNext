@@ -2,27 +2,21 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { SdIcon as component } from './index';
 import type { SdIconProps } from './types';
+import { Block } from '../storybook';
 
 const meta: Meta<SdIconProps> = {
     title: 'Icons/SdIcon',
     decorators: (_, { args }) =>
         args.fullwidth ? (
-            <div
-                style={{
-                    width: '100px',
-                    height: '100px',
-                    border: '1px solid red',
-                    resize: 'both',
-                    overflow: 'hidden',
-                }}>
+            <Block resizable bordered>
                 <component.AccountIcon {...args} />
-            </div>
+            </Block>
         ) : (
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Block wrap gap={1}>
                 {Object.values(component).map((Icon, i) => (
                     <Icon key={i} {...args} />
                 ))}
-            </div>
+            </Block>
         ),
 };
 type Story = StoryObj<typeof meta>;

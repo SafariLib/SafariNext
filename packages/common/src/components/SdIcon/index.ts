@@ -4,6 +4,7 @@ import { ArrowIcon } from './icons/ArrowIcon';
 import { BoxIcon } from './icons/BoxIcon';
 import { EllipsisIcon } from './icons/EllipsisIcon';
 import { EyeIcon } from './icons/EyeIcon';
+import { LayerIcon } from './icons/LayerIcon';
 import { ThemeSunIcon } from './icons/ThemeSunIcon';
 import { ThemeMoonIcon } from './icons/ThemeMoonIcon';
 import { SearchIcon } from './icons/SearchIcon';
@@ -35,6 +36,7 @@ export const SdIcon = Object.assign(Component, {
     FileIcon,
     FolderIcon,
     GearIcon,
+    LayerIcon,
     MemberAddIcon,
     MemberAlertIcon,
     MemberIcon,

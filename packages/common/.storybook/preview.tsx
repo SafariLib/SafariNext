@@ -4,6 +4,8 @@ import '../stylesheets/default.spacing.css';
 import '../stylesheets/default.font.css';
 import '../stylesheets/default.light.css';
 import '../stylesheets/default.dark.css';
+import '../stylesheets/website.light.css';
+import '../stylesheets/website.dark.css';
 import React from 'react';
 
 const Decorator = (Story: StoryFn) => {

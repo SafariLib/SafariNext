@@ -1,10 +1,22 @@
 .Editor-render {
     overflow: auto;
-    border: solid 1px;
-    border-color: var(--palette-text-disabled);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--palette-background);
 }
 
-.Editor-render, .Editor-render #puck-preview, .Editor-render iframe {
+#puck-preview {
+    border: 1px solid var(--palette-shadow-light);
+    box-shadow: var(--palette-shadow-light) .15rem .15rem .1rem;
+    overflow: hidden;
+
+    & iframe {
+        overflow: scroll;
+    }
+}
+
+.Editor-render #puck-preview, .Editor-render iframe {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,10 +24,3 @@
     width: 100%;
 }
 
-#puck-preview {
-    overflow: hidden;
-}
-
-#puck-preview iframe {
-    overflow: scroll;
-}

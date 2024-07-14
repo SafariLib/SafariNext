@@ -30,7 +30,7 @@
         "@fontsource/roboto": "^5.0.13",
         "@fontsource/roboto-mono": "^5.0.18",
         "@measured/puck": "^0.15.0",
-        "next": "14.2.4",
+        "next": "14.2.5",
         "react": "^18",
         "react-dom": "^18"
     }

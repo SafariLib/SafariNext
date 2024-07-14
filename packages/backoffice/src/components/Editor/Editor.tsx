@@ -3,7 +3,6 @@
 import Edit from './components/Edit/Edit';
 import Toolbar from './components/Toolbar/Toolbar';
 import Render from './components/Render/Render';
-import Tree from './components/Tree/Tree';
 import { type Config, type Data, Puck } from '@measured/puck';
 
 import './styles.css';
@@ -25,7 +24,6 @@ export default function Editor({ disabled, ...props }: EditorProps) {
             <div className={className}>
                 <Toolbar {...resolvedProps} />
                 <Render {...resolvedProps} />
-                <Tree {...resolvedProps} />
                 <Edit {...resolvedProps} />
             </div>
         </Wrapper>
@@ -40,6 +38,5 @@ function Wrapper(props: EditorProps) {
         }),
         [props.data, props.config, props.disabled],
     );
-
     return <Puck {...props} {...resolvedProps} />;
 }

@@ -1,12 +1,14 @@
-.Header-actions {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.SdHeader > div {
     gap: .375rem;
 }
 
-.Header-actions-navigation {
+.Layout-location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Layout-navigation {
     position: relative;
     width: 100%;
 

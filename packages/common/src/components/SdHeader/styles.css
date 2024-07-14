@@ -1,4 +1,4 @@
-.Header {
+.SdHeader {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -9,10 +9,18 @@
     border-bottom: 1px solid var(--palette-shadow-light);
 }
 
-.Header > .Header-actions:first-child {
+.SdHeader > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.SdHeader > div:first-child {
     justify-content: left;
 }
 
-.Header > .Header-actions:last-child {
+.SdHeader > div:last-child {
     justify-content: right;
 }

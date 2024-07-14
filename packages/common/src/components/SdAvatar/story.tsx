@@ -2,21 +2,15 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { SdAvatarProps } from './SdAvatar';
 import Component from './SdAvatar';
+import { Block } from '../storybook';
 
 const meta: Meta<SdAvatarProps> = {
     title: 'Images/SdAvatar',
     decorators: (_, { args }) =>
         args.fullwidth ? (
-            <div
-                style={{
-                    width: '100px',
-                    height: '100px',
-                    border: '1px solid red',
-                    resize: 'both',
-                    overflow: 'hidden',
-                }}>
+            <Block resizable bordered>
                 <Component {...args} />
-            </div>
+            </Block>
         ) : (
             <Component {...args} onClick={() => console.log('lol')} />
         ),

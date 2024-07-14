@@ -4,8 +4,13 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    gap: .5rem;
 
     height: 100%;
     padding: .5rem .5rem;
     border-right: 1px solid var(--palette-shadow-light);
+}
+
+.Editor-tool {
+    min-width: 250px;
 }

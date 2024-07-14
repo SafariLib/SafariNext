@@ -1,0 +1,59 @@
+.Editor-components {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    border-right: 1px solid var(--palette-shadow-light);
+
+    & div[class*="_ComponentList--isExpanded"] div[class*="_ComponentList-content"] > div {
+        display: flex;
+    }
+
+    & div[class*="_ComponentList-content"] > div {
+        display: none;
+        flex-direction: column;
+        gap: .5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    & button[class*="_ComponentList-title"] {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+        background-color: transparent;
+        color: var(--palette-text);
+        text-transform: uppercase;
+        font-size: .9rem;
+        border: none;
+        cursor: pointer;
+
+        & div[class*="_ComponentList-titleIcon"] {
+            scale: 1.6;
+        }
+    }
+
+    & div[class*="_DrawerItem"] {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    & div[class*="_DrawerItem-default"] {
+        padding: 0.25rem .5rem;
+        background-color: transparent;
+        border: 1px solid;
+        border-color: var(--palette-primary);
+        border-radius: var(--spacing-radius);
+    }
+
+    & div[class*="_DragIcon"] {
+        scale: 1.2;
+    }
+}

@@ -1,6 +1,6 @@
 import { type PropsWithChildren } from 'react';
-import ApplicationLayout from './ApplicationLayout';
+import { Layout } from '@/components';
 
 export default function LoggedLayout({ children }: Readonly<PropsWithChildren>) {
-    return <ApplicationLayout>{children}</ApplicationLayout>;
+    return <Layout>{children}</Layout>;
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import SdDrawer, { type SdDrawerProps } from './SdDrawer';
 import { SdLogo } from '../SdLogo';
+import { List, Page } from '../storybook';
 
 const meta: Meta<SdDrawerProps> = {
     title: 'Layout/SdDrawer',
@@ -25,39 +26,22 @@ const meta: Meta<SdDrawerProps> = {
         }, [open]);
 
         return (
-            <div
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    height: '100vh',
-                    width: '100vw',
-                }}>
+            <Page>
                 <SdDrawer
                     direction={direction as 'left' | 'right'}
                     open={open}
                     onClose={onClose}
                     renderHeader={() => (title ? <SdLogo /> : <div>Text title</div>)}>
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            padding: '1rem 0',
-                            gap: '1rem',
-                            height: '100%',
-                            width: '100%',
-                        }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <List>
+                        <List.Row>
                             Change direction: <button onClick={handleDirection}>{direction}</button>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        </List.Row>
+                        <List.Row>
                             Change title: <button onClick={handleTitle}>{title ? 'Logo' : 'Text'}</button>
-                        </div>
-                    </div>
+                        </List.Row>
+                    </List>
                 </SdDrawer>
-            </div>
+            </Page>
         );
     },
     argTypes: {},
