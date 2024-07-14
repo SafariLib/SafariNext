@@ -1,4 +1,4 @@
-.AppUser {
+.SdButtonUser {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,15 +11,15 @@
     }
 }
 
-.AppUser-size-small span {
+.SdButtonUser-size-small span {
     font-size: 1rem;
 }
 
-.AppUser-size-medium span {
+.SdButtonUser-size-medium span {
     font-size: 1.1rem;
 }
 
-.AppUser-size-large span {
+.SdButtonUser-size-large span {
     font-size: 1.3rem;
 }
 

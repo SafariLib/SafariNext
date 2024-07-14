@@ -1,4 +1,5 @@
-.Drawer {
+.SdDrawer {
+    box-sizing: border-box;
     position: absolute;
     left: unset !important;
     right: unset !important;
@@ -16,14 +17,14 @@
     border: none;
 }
 
-.Drawer-direction-left {
+.SdDrawer-direction-left {
     left: 0 !important;
     border-top-right-radius: calc(var(--spacing-radius) * 2);
     border-bottom-right-radius: calc(var(--spacing-radius) * 2);
     box-shadow: 0 2px 4px 0 var(--palette-shadow);
 }
 
-.Drawer-direction-right {
+.SdDrawer-direction-right {
     right: 0 !important;
     border-top-left-radius: calc(var(--spacing-radius) * 2);
     border-bottom-left-radius: calc(var(--spacing-radius) * 2);

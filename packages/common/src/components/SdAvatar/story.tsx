@@ -4,7 +4,7 @@ import type { SdAvatarProps } from './SdAvatar';
 import Component from './SdAvatar';
 
 const meta: Meta<SdAvatarProps> = {
-    title: 'Images/Avatar',
+    title: 'Images/SdAvatar',
     decorators: (_, { args }) =>
         args.fullwidth ? (
             <div

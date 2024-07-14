@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import './styles.css';
 
 interface DrawerBackgroundProps {
@@ -8,5 +9,5 @@ interface DrawerBackgroundProps {
 }
 
 export default function DrawerBackground(props: DrawerBackgroundProps) {
-    return props.open ? <div className="Drawer-background" onClick={props.onClose} /> : null;
+    return props.open ? <div className="SdDrawer-background" onClick={props.onClose} /> : null;
 }

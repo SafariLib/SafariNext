@@ -3,10 +3,9 @@
 import './styles.css';
 import type { PropsWithChildren } from 'react';
 import React from 'react';
-import { Header } from '../../components/Header';
+import { Header } from '@/components';
 import { EUserRole } from '@/models';
-import { Drawer } from '@/components/Drawer';
-import { SdLogo } from '@safaridigital/common';
+import { SdDrawer, SdLogo } from '@safaridigital/common';
 
 const fakeUser = {
     id: '1',
@@ -33,7 +32,7 @@ export default function ApplicationLayout({ children }: PropsWithChildren) {
                     <Header.Actions.Settings />
                 </Header.Actions>
             </Header>
-            <Drawer
+            <SdDrawer
                 open={drawerOpen}
                 onClose={handleDrawer}
                 renderHeader={() => <SdLogo />}

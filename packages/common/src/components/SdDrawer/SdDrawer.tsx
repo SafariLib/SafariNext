@@ -1,28 +1,27 @@
 'use client';
 
-import { useProps } from '@safaridigital/common';
-import './styles.css';
-import type { PropsWithChildren } from 'react';
-import React from 'react';
+import { useProps } from '../../utils/element';
 import DrawerBackground from './components/DrawerBackground/DrawerBackground';
 import DrawerHeader from './components/DrawerHeader/DrawerHeader';
+import React, { type PropsWithChildren } from 'react';
+import './styles.css';
 
-interface DrawerProps extends PropsWithChildren {
+export interface SdDrawerProps extends PropsWithChildren {
     open: boolean;
     onClose: () => void;
     renderHeader?: () => React.ReactNode;
     direction?: 'left' | 'right';
 }
 
-export default function Drawer({ children, direction = 'left', ...props }: DrawerProps) {
-    const { className, renderHeader, ...resolvedProps } = useProps({ direction, ...props }, 'Drawer');
+export default function SdDrawer({ children, direction = 'left', ...props }: SdDrawerProps) {
+    const { className, renderHeader, ...resolvedProps } = useProps({ direction, ...props }, 'SdDrawer');
 
     return (
         <React.Fragment>
             <DrawerBackground {...resolvedProps} />
             <dialog {...resolvedProps} className={className}>
                 <DrawerHeader {...resolvedProps}>{renderHeader && renderHeader()}</DrawerHeader>
-                <div className="Drawer-content">{children}</div>
+                <div className="SdDrawer-content">{children}</div>
             </dialog>
         </React.Fragment>
     );

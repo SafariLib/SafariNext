@@ -1,6 +1,6 @@
 'use client';
 
-import { AppUser } from '@/components';
+import { SdButtonUser } from '@safaridigital/common';
 import type { User } from '@/models';
 
 interface UserProps extends User {
@@ -9,5 +9,5 @@ interface UserProps extends User {
 }
 
 export default function User(props: UserProps) {
-    return <AppUser {...props} />;
+    return <SdButtonUser {...props} />;
 }
