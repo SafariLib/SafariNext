@@ -1,14 +1,14 @@
 'use client';
 
-import Edit from './components/Edit/Edit';
-import Toolbar from './components/Toolbar/Toolbar';
-import Render from './components/Render/Render';
 import { type Config, type Data, Puck } from '@measured/puck';
 
 import './styles.css';
 import { useProps } from '@safaridigital/common';
 import { useMemo } from 'react';
-import { defaultPuckConfig, defaultPuckData } from '@/components/Editor/utils/default';
+import { defaultPuckConfig, defaultPuckData } from './utils/default';
+import Edit from './components/Edit/Edit';
+import Render from './components/Render/Render';
+import Toolbar from './components/Toolbar/Toolbar';
 
 export interface EditorProps {
     data?: Data;

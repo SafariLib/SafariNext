@@ -1,26 +1,15 @@
 .Editor-render {
-    overflow: auto;
-    height: 100%;
     width: 100%;
     padding: 1rem;
     background-color: var(--palette-background);
+
+    & iframe div[class*="_DraggableComponent-actions"] {
+        position: absolute;
+        z-index: 1000;
+    }
 }
 
 #puck-preview {
     border: 1px solid var(--palette-shadow-light);
     box-shadow: var(--palette-shadow-light) .15rem .15rem .1rem;
-    overflow: hidden;
-
-    & iframe {
-        overflow: scroll;
-    }
 }
-
-.Editor-render #puck-preview, .Editor-render iframe {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-

@@ -1,52 +1,13 @@
 .Editor-tree {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     padding: 1rem 1rem;
 
     & ul[class*="_LayerTree"] {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    & div[class*="_Layer"] {
-        & :hover {
-            background-color: var(--palette-background-disabled);
-        }
-    }
-
-    & button[class*="_Layer-clickable"] {
-        cursor: pointer;
-        border-radius: var(--spacing-radius);
-        width: 100%;
-        min-width: 5rem;
-        min-height: 1.8125rem;
-        background-color: transparent;
-        border-color: transparent;
-        color: var(--palette-text);
-    }
-
-    & div[class*="_Layer-title"] {
-        display: flex;
-        flex-direction: row;
-        gap: .5rem;
-        padding: 0.25rem 1rem;
-        color: inherit;
-        transition: all 0.3s ease;
-
-        & > div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        gap: .25rem;
     }
 }
 
-[class*="_Layer--isSelected"] {
-    background-color: var(--palette-background-disabled);
-    border-radius: var(--spacing-radius);
-}
+

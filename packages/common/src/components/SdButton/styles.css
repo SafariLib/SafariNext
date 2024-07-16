@@ -70,9 +70,14 @@ button.SdButton {
     background-color: transparent;
     border-color: var(--palette-primary);
 
-    &:hover, &.SdButton-selected {
+    &:hover {
         border-color: var(--palette-primary-light);
         color: var(--palette-primary-light);
+    }
+
+    &:hover, &.SdButton-selected {
+        border-color: var(--palette-primary);
+        color: var(--palette-primary);
     }
 
     &.SdButton-disabled {
@@ -85,8 +90,12 @@ button.SdButton {
     border-color: transparent;
     background-color: transparent;
 
-    &:hover, &.SdButton-selected {
+    &:hover {
         color: var(--palette-primary-light);
+    }
+
+    &:hover, &.SdButton-selected {
+        color: var(--palette-primary);
     }
 
     &.SdButton-disabled {
@@ -103,8 +112,12 @@ button.SdButton {
     background-color: transparent;
     border-color: transparent;
 
-    &:hover, &.SdButton-selected {
-        background-color: var(--palette-background-disabled);
+    &:hover {
+        background-color: var(--palette-primary-light);
+    }
+
+    &.SdButton-selected {
+        background-color: var(--palette-primary);
     }
 
     &.SdButton-disabled {

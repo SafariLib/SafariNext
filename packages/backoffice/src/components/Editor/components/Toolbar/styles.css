@@ -1,5 +1,5 @@
 .Editor-toolbar {
-    background-color: var(--palette-background);
+    background-color: var(--palette-paper);
 
     display: flex;
     flex-direction: column;
@@ -12,5 +12,6 @@
 }
 
 .Editor-tool {
-    min-width: 250px;
+    min-width: 300px;
+    border-right: 1px solid var(--palette-shadow-light);
 }

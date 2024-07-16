@@ -3,9 +3,9 @@
     --palette-primary-light: #ffcf33;
     --palette-text: #222222;
     --palette-text-disabled: #707070;
-    --palette-background: #fcfcfc;
+    --palette-background: #f0f0f0;
     --palette-background-disabled: #c0c0c0;
-    --palette-paper: #f0f0f0;
+    --palette-paper: #fcfcfc;
     --palette-shadow: #00000050;
     --palette-shadow-light: #00000020;
 }

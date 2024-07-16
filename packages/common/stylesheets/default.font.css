@@ -1,5 +1,6 @@
 :root {
     --text-font: 'Roboto', monospace;
+    --puck-font-family: 'Roboto', monospace;
     --text-weight-regular: 400;
     --text-weight-medium: 500;
     --text-weight-bold: 700;

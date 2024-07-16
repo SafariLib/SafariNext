@@ -1,5 +1,9 @@
-.SdHeader > div {
-    gap: .375rem;
+.SdHeader {
+    background-color: var(--palette-paper);
+
+    & > div {
+        gap: .375rem;
+    }
 }
 
 .Layout-location {

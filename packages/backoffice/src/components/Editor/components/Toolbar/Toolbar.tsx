@@ -28,7 +28,6 @@ export default function Toolbar(props: ToolbarProps) {
     const resolvedProps = useProps(props, 'Editor-toolbar');
     const { mapTools, getTool } = useToolbar(toolbarOptions);
     const [activeTool, setActiveTool] = React.useState<ToolOptions | null>(null);
-
     const handleToolClick = (key: ToolOptions) => setActiveTool(activeTool === key ? null : key);
 
     return (
