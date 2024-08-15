@@ -1,0 +1,28 @@
+{
+    "name": "@digital/ui",
+    "author": "BenoitSafari",
+    "version": "0.1.0",
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "main": "dist/index.js",
+    "publishConfig": {
+        "directory": "dist"
+    },
+    "scripts": {
+        "build": "node ./run.build.js",
+        "build:storybook": "storybook build",
+        "test": "vitest",
+        "lint": "eslint .",
+        "storybook": "storybook dev -p 6006"
+    },
+    "devDependencies": {
+        "@storybook/addon-essentials": "^8.1.11",
+        "@storybook/addon-links": "^8.1.11",
+        "@storybook/blocks": "^8.1.11",
+        "@storybook/react": "^8.1.11",
+        "@storybook/react-vite": "^8.1.11",
+        "@storybook/test": "^8.1.11",
+        "storybook": "^8.1.11",
+        "@digital/common": "workspace:*"
+    }
+}

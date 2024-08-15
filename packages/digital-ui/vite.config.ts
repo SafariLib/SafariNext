@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { resolve } from 'path';
+import preserveDirectives from 'rollup-plugin-preserve-directives';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
@@ -9,13 +10,14 @@ export default defineConfig({
             rollupTypes: true,
             insertTypesEntry: true,
         }),
+        preserveDirectives(),
     ],
     build: {
         rollupOptions: {
+            external: ['react', 'react-dom'],
             output: {
                 preserveModules: true,
             },
-            external: ['child_process', 'fs', 'path'],
         },
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
@@ -25,6 +27,6 @@ export default defineConfig({
     },
     test: {
         globals: true,
-        environment: 'node',
+        environment: 'jsdom',
     },
 });
