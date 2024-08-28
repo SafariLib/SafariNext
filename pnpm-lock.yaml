@@ -63,6 +63,12 @@ importers:
 
   packages/app@backoffice:
     dependencies:
+      '@auth/core':
+        specifier: ^0.34.2
+        version: 0.34.2
+      '@digital/common':
+        specifier: workspace:*
+        version: link:../common/dist
       '@digital/ui':
         specifier: workspace:*
         version: link:../digital-ui/dist

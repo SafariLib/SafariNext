@@ -15,7 +15,10 @@
 
 #### Environment variables
 
+:warning: **"NEXT_" Prefixed variables are public and can be accessed on the client side.**
 ```
 NODE_ENV="production" || "development"
+NEXT_PUBLIC_API_URL="string"
 NEXT_TELEMETRY_DISABLED="int"
+AUTH_SECRET="string"
 ```

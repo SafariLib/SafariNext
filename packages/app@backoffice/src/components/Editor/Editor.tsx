@@ -1,9 +1,10 @@
 'use client';
 
-import { type Config, type Data, Puck } from '@measured/puck';
+import { type Config, type Data, Puck, usePuck } from '@measured/puck';
 
 import { useProps } from '@digital/ui';
-import { useMemo } from 'react';
+import type { PropsWithChildren} from 'react';
+import { useEffect, useMemo } from 'react';
 import Edit from './components/Edit/Edit';
 import Render from './components/Render/Render';
 import Toolbar from './components/Toolbar/Toolbar';
@@ -21,13 +22,21 @@ export default function Editor({ disabled, ...props }: EditorProps) {
     const { className, ...resolvedProps } = useProps({ disabled }, 'Editor');
     return (
         <Wrapper {...props}>
-            <div className={className}>
-                <Toolbar {...resolvedProps} />
-                <Render {...resolvedProps} />
-                <Edit {...resolvedProps} />
-            </div>
+            <Handler>
+                <div className={className}>
+                    <Toolbar {...resolvedProps} />
+                    <Render {...resolvedProps} />
+                    <Edit {...resolvedProps} />
+                </div>
+            </Handler>
         </Wrapper>
     );
+}
+
+function Handler({ children }: PropsWithChildren) {
+    const { appState } = usePuck();
+    useEffect(() => console.log(appState), [appState]);
+    return children;
 }
 
 function Wrapper(props: EditorProps) {
@@ -38,5 +47,6 @@ function Wrapper(props: EditorProps) {
         }),
         [props.data, props.config, props.disabled],
     );
+
     return <Puck {...props} {...resolvedProps} />;
 }
