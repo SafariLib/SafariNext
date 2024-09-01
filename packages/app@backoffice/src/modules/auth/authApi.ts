@@ -1,10 +1,10 @@
 import type { JWT } from '@auth/core/jwt';
 import type { User } from '@auth/core/types';
-import { cookies, headers } from 'next/headers';
 import { isDevelopment } from '@digital/common';
-import { DigitalApi } from '@/app/api/DigitalApi';
-import type { Result } from '@/dto/Result';
+import { cookies, headers } from 'next/headers';
+import type { Result } from '@dto';
 import { decodeJwt } from './authUtils';
+import { DigitalApi } from '../http';
 
 const cookiePrefix = isDevelopment() ? 'dev_' : '';
 

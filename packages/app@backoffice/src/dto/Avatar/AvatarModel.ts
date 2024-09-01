@@ -1,4 +1,4 @@
-import type { EntityBase, Guid } from '@/dto/EntityBase';
+import type { EntityBase, Guid } from '../EntityBase';
 
 export interface AvatarModel extends EntityBase {
     documentId: Guid;

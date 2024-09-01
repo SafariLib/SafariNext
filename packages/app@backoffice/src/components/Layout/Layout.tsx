@@ -1,6 +1,5 @@
 'use client';
 
-import { EUserRole } from '@/models';
 import { SdDrawer, SdHeader, SdLogo } from '@digital/ui';
 import React, { type PropsWithChildren } from 'react';
 import Location from './components/Location';
@@ -9,13 +8,16 @@ import Settings from './components/Settings';
 import Theme from './components/Theme';
 import User from './components/User';
 import './styles.css';
+import type { UserModel } from '@dto';
 
-const fakeUser = {
-    id: '1',
+const fakeUser: UserModel = {
+    id: '1111-2222-3333-4444-5555',
     username: 'John Doe',
     email: 'lol',
-    role: EUserRole.User,
+    role: 1,
     isActive: true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
 };
 
 export default function Layout({ children }: PropsWithChildren) {

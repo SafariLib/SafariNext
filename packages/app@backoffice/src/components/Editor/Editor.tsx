@@ -1,15 +1,13 @@
 'use client';
 
+import React, { type PropsWithChildren } from 'react';
 import { type Config, type Data, Puck, usePuck } from '@measured/puck';
-
 import { useProps } from '@digital/ui';
-import type { PropsWithChildren} from 'react';
-import { useEffect, useMemo } from 'react';
 import Edit from './components/Edit/Edit';
 import Render from './components/Render/Render';
 import Toolbar from './components/Toolbar/Toolbar';
-import './styles.css';
 import { defaultPuckConfig, defaultPuckData } from './utils/default';
+import './styles.css';
 
 export interface EditorProps {
     data?: Data;
@@ -35,12 +33,12 @@ export default function Editor({ disabled, ...props }: EditorProps) {
 
 function Handler({ children }: PropsWithChildren) {
     const { appState } = usePuck();
-    useEffect(() => console.log(appState), [appState]);
+    React.useEffect(() => console.log(appState), [appState]);
     return children;
 }
 
 function Wrapper(props: EditorProps) {
-    const resolvedProps = useMemo(
+    const resolvedProps = React.useMemo(
         () => ({
             data: props.disabled ? defaultPuckData : props.data || defaultPuckData,
             config: props.disabled ? defaultPuckConfig : props.config || defaultPuckConfig,

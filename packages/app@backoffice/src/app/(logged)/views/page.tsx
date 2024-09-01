@@ -1,6 +1,6 @@
 'use client';
 
-import { Editor } from '@/components';
+import { Editor } from '@components';
 import { viewConfig } from '@digital/ui';
 
 const fakeData = {

@@ -1,6 +1,6 @@
 'use client';
 
-import { usePageTitle } from '@/locales';
+import { usePageTitle } from '@locales';
 
 export default function Location() {
     const title = usePageTitle();

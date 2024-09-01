@@ -1,4 +1,4 @@
-import { NextAuth, signIn } from '@/auth';
+import { NextAuth, signIn } from '@modules/auth';
 import React from 'react';
 
 export default async function Home() {

@@ -11,6 +11,21 @@
         "paths": {
             "@/*": [
                 "./src/*"
+            ],
+            "@modules/*": [
+                "./src/modules/*"
+            ],
+            "@config": [
+                "./src/config/index.ts"
+            ],
+            "@components": [
+                "./src/components/index.ts"
+            ],
+            "@dto": [
+                "./src/dto/index.ts"
+            ],
+            "@locales": [
+                "./src/locales/index.ts"
             ]
         }
     },

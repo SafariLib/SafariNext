@@ -1,4 +1,4 @@
-import type { ResultMessage } from '@/dto/ResultMessage';
+import type { ResultMessage } from './ResultMessage';
 
 export interface Result<T> {
     value: T;

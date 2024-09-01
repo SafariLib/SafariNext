@@ -1,5 +1,8 @@
-import { Page } from '@/components';
-import { APP_DOMAIN, APP_NAME } from '@/config';
+import { type Metadata } from 'next';
+import { type PropsWithChildren } from 'react';
+import { APP_DOMAIN, APP_NAME } from '@config';
+import { Page } from '@components';
+import { Providers } from './providers';
 import '@digital/ui/default.dark.css';
 import '@digital/ui/default.font.css';
 import '@digital/ui/default.light.css';
@@ -9,10 +12,7 @@ import '@digital/ui/style.css';
 import '@digital/ui/website.dark.css';
 import '@digital/ui/website.light.css';
 import '@measured/puck/puck.css';
-import { type Metadata } from 'next';
-import { type PropsWithChildren } from 'react';
 import './fontsources';
-import { Providers } from './providers';
 import './styles.globals.css';
 
 export const metadata: Metadata = {

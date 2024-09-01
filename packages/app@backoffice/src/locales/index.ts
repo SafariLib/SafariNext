@@ -1,4 +1,4 @@
-import { locales } from '@/locales/locales';
+import { locales } from './locales';
 
 export { default as usePageTitle } from './usePageTitle';
 export * from './locales';

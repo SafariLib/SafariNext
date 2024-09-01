@@ -1,6 +1,6 @@
 'use client';
 
-import { t } from '@/locales';
+import { t } from '@locales';
 import { SdText, useProps } from '@digital/ui';
 import { Puck } from '@measured/puck';
 import './styles.css';

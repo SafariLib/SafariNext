@@ -2,10 +2,10 @@
 
 import { SdButton, SdIcon, useProps } from '@digital/ui';
 import React from 'react';
+import useToolbar from './useToolbar';
 import Blocks from '../Blocks/Blocks';
 import Tree from '../Tree/Tree';
 import './styles.css';
-import useToolbar from './useToolbar';
 
 interface ToolbarProps {
     disabled?: boolean;
