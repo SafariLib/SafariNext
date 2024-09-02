@@ -1,2 +1,2 @@
-export { default as NextAuth, authBaseUrl } from './authOptions';
+export { default as NextAuth, authBaseUrl } from './options';
 export * from './handlers';

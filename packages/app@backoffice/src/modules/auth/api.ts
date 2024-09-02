@@ -3,8 +3,8 @@ import type { User } from '@auth/core/types';
 import { isDevelopment } from '@digital/common';
 import { cookies, headers } from 'next/headers';
 import type { Result } from '@dto';
-import { decodeJwt } from './authUtils';
-import { DigitalApi } from '../http';
+import { DigitalApi } from '@modules/http';
+import { decodeJwt } from './utils';
 
 const cookiePrefix = isDevelopment() ? 'dev_' : '';
 
@@ -16,18 +16,27 @@ export async function login(payload: Partial<Record<'login' | 'password', unknow
     const { data, ...response } = await DigitalApi.post<LoginResponse>('/authentication/login', {
         body: payload,
     });
-    const cookie = response.headers.get('set-cookie');
-    if (response.unauthorized || data.value.token || !cookie) return null;
+
+    const refreshToken = response.headers.get('set-cookie');
+    const accessToken = data.value.token;
+
+    if (response.unauthorized || !accessToken || !refreshToken) return null;
 
     cookies().set({
         name: `${cookiePrefix}token`,
-        value: cookie,
+        value: refreshToken,
         httpOnly: true,
         sameSite: 'strict',
         secure: true,
     });
+    const { content, exp } = decodeJwt(accessToken);
 
-    return data.value;
+    return {
+        ...content,
+        accessToken,
+        refreshToken,
+        exp,
+    };
 }
 
 export async function logout(): Promise<void> {

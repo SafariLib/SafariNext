@@ -1,4 +1,4 @@
-import NextAuth from './authOptions';
+import NextAuth from './options';
 
 export async function signIn(form: FormData) {
     await NextAuth.signIn('credentials', form);
