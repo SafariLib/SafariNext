@@ -2,7 +2,7 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "declaration": false,
-        "strict": false,
+        "strict": true,
         "plugins": [
             {
                 "name": "next"
