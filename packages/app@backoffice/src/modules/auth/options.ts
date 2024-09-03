@@ -1,5 +1,6 @@
 import NextAuth, { type NextAuthConfig } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
+import { PAGE_URL_LOGIN } from '@config';
 import { login as authorize } from './api';
 import { authorized, jwt, session } from './callbacks';
 
@@ -11,6 +12,11 @@ const options: NextAuthConfig = {
     basePath: authBaseUrl,
     secret: process.env.AUTH_SECRET,
     trustHost: true,
+    pages: {
+        signIn: PAGE_URL_LOGIN,
+        signOut: '/logout',
+        error: '/login',
+    },
 };
 
 declare module 'next-auth' {

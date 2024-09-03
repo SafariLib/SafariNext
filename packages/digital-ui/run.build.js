@@ -1,13 +1,13 @@
-import { copyFiles, execCommand } from '@digital/common';
+import { Process } from '@digital/common';
 
 (async () => {
     try {
         console.log('Compiling TypeScript...');
-        await execCommand('tsc --project tsconfig.json');
+        await Process.exec('tsc --project tsconfig.json');
         console.log('Running Vite build...');
-        await execCommand('vite build');
+        await Process.exec('vite build');
         console.log('Copying stylesheets...');
-        copyFiles('./stylesheets', './dist');
+        Process.copyFiles('./stylesheets', './dist');
         console.log('Done!');
     } catch (error) {
         console.error('Build process failed:', error);

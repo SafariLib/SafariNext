@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import type { JWT } from '@auth/core/jwt';
 import type { Account, Session, User } from '@auth/core/types';
-import { PAGE_URL_HOME } from '@config';
+import { PAGE_URL_HOME, PAGE_URL_LOGIN } from '@config';
 import { refresh } from './api';
 import { decodeJwt, isAccessTokenValid } from './utils';
 
@@ -9,6 +9,7 @@ export async function jwt({ token, user, account }: { token: JWT; user: User; ac
     if (account && user) {
         const { exp } = decodeJwt(user.accessToken);
         token = { ...token, ...user, accessTokenExpires: exp * 1000 };
+        return token;
     }
 
     if (isAccessTokenValid(token)) {
@@ -36,6 +37,11 @@ export async function session({ session, token }: { session: Session; token: JWT
 export async function authorized({ request, auth }: { request: NextRequest; auth: Session | null }) {
     const { pathname } = request.nextUrl;
     const isLogged = !!auth;
-    if (isLogged && pathname === '/login') return Response.redirect(new URL(PAGE_URL_HOME, request.nextUrl));
+
+    if (isLogged && pathname === PAGE_URL_LOGIN)
+        return Response.redirect(new URL(PAGE_URL_HOME, request.nextUrl));
+    else if (!isLogged && pathname !== PAGE_URL_LOGIN)
+        return Response.redirect(new URL(PAGE_URL_LOGIN, request.nextUrl));
+
     return isLogged;
 }

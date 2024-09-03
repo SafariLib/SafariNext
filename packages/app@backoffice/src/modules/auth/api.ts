@@ -1,12 +1,13 @@
 import type { JWT } from '@auth/core/jwt';
 import type { User } from '@auth/core/types';
-import { isDevelopment } from '@digital/common';
-import { cookies, headers } from 'next/headers';
+import { cookies } from 'next/headers';
 import type { Result } from '@dto';
 import { DigitalApi } from '@modules/http';
 import { decodeJwt } from './utils';
+import NextAuth from './options';
+import { buildHeadersAuthorization } from '@modules/http/utils';
 
-const cookiePrefix = isDevelopment() ? 'dev_' : '';
+const cookieName = 'SafariToken';
 
 type LoginResponse = Result<{
     token: string;
@@ -17,50 +18,48 @@ export async function login(payload: Partial<Record<'login' | 'password', unknow
         body: payload,
     });
 
-    const refreshToken = response.headers.get('set-cookie');
-    const accessToken = data.value.token;
+    const refreshToken = response.cookieToken;
+    const accessToken = data?.value?.token;
 
     if (response.unauthorized || !accessToken || !refreshToken) return null;
 
-    cookies().set({
-        name: `${cookiePrefix}token`,
-        value: refreshToken,
-        httpOnly: true,
-        sameSite: 'strict',
-        secure: true,
-    });
+    // FIXME: Token should be stored only in the cookie, some refactoring is needed
+    cookies().set({ ...refreshToken, name: cookieName });
     const { content, exp } = decodeJwt(accessToken);
 
     return {
         ...content,
         accessToken,
-        refreshToken,
+        refreshToken: refreshToken.value,
         exp,
     };
 }
 
 export async function logout(): Promise<void> {
-    await DigitalApi.post('/authentication/logout', { headers: headers() });
-    cookies().delete(`${cookiePrefix}token`);
+    const session = await NextAuth.auth();
+    await DigitalApi.post('/authentication/logout', { headers: buildHeadersAuthorization(session) });
+    cookies().delete(cookieName);
 }
 
 export async function refresh(token: JWT): Promise<JWT> {
-    const { data, ...response } = await DigitalApi.get<LoginResponse>('/authentication/refresh', {
-        headers: headers(),
-    });
-    if (response.unauthorized) {
-        cookies().delete(`${cookiePrefix}token`);
+    const session = await NextAuth.auth();
+    const { data, cookieToken, ...response } = await DigitalApi.post<LoginResponse>(
+        '/authentication/refresh',
+        { headers: buildHeadersAuthorization(session) },
+    );
+
+    const accessToken = data?.value?.token;
+    if (response.unauthorized || !accessToken || !cookieToken) {
+        cookies().delete(cookieName);
         return { ...token, error: 'Unauthorized', hasError: true };
     }
-
-    const bearerToken = data.value.token;
-    const cookie = response.headers.get('set-cookie');
-    const { exp } = decodeJwt(bearerToken);
+    cookies().set({ ...cookieToken, name: cookieName });
+    const { exp } = decodeJwt(accessToken);
 
     return {
         ...token,
-        accessToken: bearerToken,
-        refreshToken: cookie,
+        accessToken,
+        refreshToken: cookieToken.value,
         accessTokenExpires: exp * 1000,
         error: null,
         hasError: false,

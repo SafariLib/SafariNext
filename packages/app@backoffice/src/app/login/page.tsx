@@ -9,7 +9,10 @@ export default async function Home() {
             <form
                 action={async formData => {
                     'use server';
-                    await signIn(formData);
+                    await signIn({
+                        login: String(formData.get('login')),
+                        password: String(formData.get('password')),
+                    });
                 }}
                 style={{
                     width: 200,
