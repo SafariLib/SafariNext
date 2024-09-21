@@ -7,5 +7,4 @@ dist
 .idea
 
 */**/*.tsbuildinfo
-*/**/*.env
-*storybook.log
+*.env
