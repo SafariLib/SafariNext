@@ -1,9 +1,11 @@
 import React from 'react';
+import { Header, Page, Text } from '@/components';
 
 export default async function Home() {
     return (
-        <React.Fragment>
-            <h1 style={{ fontFamily: 'var(--font-title)', fontWeight: 400 }}>SAFARIDIGITAL</h1>
-        </React.Fragment>
+        <Page>
+            <Header />
+            <Text.Heading>SAFARIDIGITAL</Text.Heading>
+        </Page>
     );
 }

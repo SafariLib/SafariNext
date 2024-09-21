@@ -15,5 +15,5 @@ import '@fontsource/roboto/700.css';
 
 export const neoneon = local({
     src: [{ path: './neoneon.otf', weight: '400', style: 'normal' }],
-    variable: '--font-title',
+    variable: '--sd-font-heading',
 });

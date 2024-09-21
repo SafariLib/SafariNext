@@ -1,0 +1,34 @@
+.SafariDigital-Header {
+    background-color: var(--sd-palette-primary);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.SafariDigital-Header-Nav {
+    & ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & a {
+        color: var(--sd-palette-text-inverted);
+        text-transform: uppercase;
+    }
+
+    & .SafariDigital-Header-Nav-Item {
+    }
+
+    & .SafariDigital-Header-Nav-Item-Active a {
+        font-weight: 700;
+    }
+}
+
+.SafariDigital-Header-Logo {
+
+}

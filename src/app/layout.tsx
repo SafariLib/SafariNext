@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import { type PropsWithChildren } from 'react';
 import { API_URL, APP_DOMAIN, APP_NAME, validateEnv } from '@/config';
 import { neoneon } from '@/assets/fonts';
+import './styles.css';
 
 export const metadata: Metadata = {
     title: APP_DOMAIN,
