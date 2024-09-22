@@ -9,15 +9,11 @@ export default function About() {
                 direction="row"
                 align="center"
                 justify="spaced"
+                spacing="large"
                 fullWidth
                 className="about-hero">
                 <Sdui.FlexContainer flex={1} className="about-portrait">
-                    <Sdui.Image
-                        src={`${API_URL}16333472852681.jpg`}
-                        alt="Portrait de l'auteur"
-                        variant="secondary"
-                        rounded
-                    />
+                    <img src={`${API_URL}16333472852681.jpg`} alt="Portrait de l'auteur" />
                 </Sdui.FlexContainer>
                 <Sdui.FlexContainer spacing="medium" align="end" flex={2} className="about-text">
                     <Sdui.Heading variant="h2">qui sommes-nous ?</Sdui.Heading>

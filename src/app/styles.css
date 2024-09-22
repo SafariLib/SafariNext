@@ -33,6 +33,7 @@ body {
 }
 
 .sdui-page {
+    position: relative;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -91,6 +92,8 @@ body {
     color: var(--sd-palette-text-inverted);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+
 
     & .sdui-page-footer-content {
         padding: var(--sd-spacing-p-2) var(--sd-spacing-p-2);
