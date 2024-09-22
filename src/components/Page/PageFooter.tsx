@@ -17,7 +17,12 @@ export default function PageFooter({ nav }: PageFooterProps) {
                         </span>
                     </Sdui.Paragraph>
                 </Sdui.FlexContainer>
-                <Sdui.FlexContainer direction="row" justify="spaced" align="end" fullWidth>
+                <Sdui.FlexContainer
+                    direction="row"
+                    justify="spaced"
+                    align="end"
+                    fullWidth
+                    className="sdui-page-footer-content-actions">
                     <Sdui.Nav nav={nav} direction="column" />
                     <Sdui.FlexContainer align="center">
                         <Sdui.Paragraph>@safaridigital - 2024</Sdui.Paragraph>

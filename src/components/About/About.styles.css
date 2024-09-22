@@ -1,0 +1,24 @@
+.about-hero {
+    @media (max-width: 780px) {
+        flex-direction: column;
+    }
+
+    align-self: center;
+    max-width: 1024px;
+    gap: var(--sd-spacing-p-3);
+
+    & .about-portrait {
+        @media (max-width: 780px) {
+            max-width: 300px;
+        }
+    }
+
+    & .about-text {
+        @media (max-width: 780px) {
+            align-items: center;
+            .sdui-text {
+                text-align: center;
+            }
+        }
+    }
+}

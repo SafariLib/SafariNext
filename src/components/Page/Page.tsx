@@ -1,11 +1,10 @@
 import type { PropsWithChildren } from 'react';
 import PageHeader from './PageHeader';
 import PageFooter from '@/components/Page/PageFooter';
-import type { PageCgu, PageNavItem } from '@/components/Page/types';
+import type { PageNavItem } from '@/components/Page/types';
 
 export interface PageProps extends PropsWithChildren {
     nav: PageNavItem[];
-    cgu: PageCgu;
     background?: string;
 }
 

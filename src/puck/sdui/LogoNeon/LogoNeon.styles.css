@@ -9,6 +9,10 @@
         user-select: none;
         position: absolute;
         bottom: -112px;
-        left: -52px
+        left: -52px;
+
+        @media (max-width: 768px) {
+            left: -32px;
+        }
     }
 }

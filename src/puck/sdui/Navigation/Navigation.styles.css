@@ -1,4 +1,8 @@
 .sdui-nav {
+    @media (max-width: 768px) {
+        display: none;
+    }
+    
     & .sdui-nav-list {
         padding: 0;
         margin: 0;

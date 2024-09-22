@@ -1,6 +1,10 @@
 .sdui-container {
     width: 100%;
     max-width: var(--sd-max-width);
+
+    @media (max-width: 780px) {
+        padding: 0 1rem;
+    }
 }
 
 .sdui-container-flex {
@@ -53,4 +57,44 @@
 
 .sdui-container-spacing-large {
     gap: var(--sd-spacing-p-3);
+}
+
+.sdui-container-flex-1 {
+    flex: 1;
+}
+
+.sdui-container-flex-2 {
+    flex: 2;
+}
+
+.sdui-container-flex-3 {
+    flex: 3;
+}
+
+.sdui-container-flex-4 {
+    flex: 4;
+}
+
+.sdui-container-flex-5 {
+    flex: 5;
+}
+
+.sdui-container-flex-6 {
+    flex: 6;
+}
+
+.sdui-container-flex-7 {
+    flex: 7;
+}
+
+.sdui-container-flex-8 {
+    flex: 8;
+}
+
+.sdui-container-flex-9 {
+    flex: 9;
+}
+
+.sdui-container-flex-10 {
+    flex: 10;
 }

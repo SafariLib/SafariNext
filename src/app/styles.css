@@ -103,7 +103,7 @@ body {
         & .sdui-page-footer-catch {
             font-style: italic;
             font-size: 1.2rem;
-            color: var(--sd-palette-secondary);
+            color: var(--sd-palette-tertiary);
         }
 
         & .sdui-page-footer-cgu {
@@ -112,6 +112,18 @@ body {
 
         & .sdui-container {
             z-index: 1;
+        }
+    }
+
+    & .sdui-page-footer-content-actions {
+        @media (max-width: 780px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: var(--sd-spacing-p-2);
+
+            & div {
+                align-items: center;
+            }
         }
     }
 }

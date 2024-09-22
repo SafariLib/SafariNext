@@ -6,6 +6,7 @@ interface ContainerProps extends PropsWithChildren {
     justify?: 'start' | 'end' | 'center' | 'spaced';
     align?: 'start' | 'end' | 'center';
     spacing?: 'small' | 'medium' | 'large';
+    flex?: number;
     className?: string;
     fullWidth?: boolean;
 }
@@ -22,6 +23,7 @@ export function FlexContainer({
     justify,
     align,
     fullWidth,
+    flex,
 }: ContainerProps) {
     const dirClass = `sdui-container-flex-${direction}`;
     const jusClass = justify ? ` sdui-container-justify-${justify}` : '';
@@ -29,10 +31,10 @@ export function FlexContainer({
     const spacingClass = spacing ? ` sdui-container-spacing-${spacing}` : '';
     const propsClass = className ? ` ${className}` : '';
     const fullWidthClass = fullWidth ? ' sdui-container' : '';
-
+    const flexClass = flex ? ` sdui-container-flex-${flex}` : '';
     return (
         <div
-            className={`sdui-container-flex${fullWidthClass} ${dirClass}${spacingClass}${jusClass}${alClass}${propsClass}`}>
+            className={`sdui-container-flex${fullWidthClass} ${dirClass}${flexClass}${spacingClass}${jusClass}${alClass}${propsClass}`}>
             {children}
         </div>
     );

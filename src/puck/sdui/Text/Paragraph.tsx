@@ -5,7 +5,7 @@ interface TextProps extends PropsWithChildren {
     align?: 'left' | 'center' | 'right';
 }
 
-export default function Link({ align, ...props }: TextProps) {
+export default function Paragraph({ align, ...props }: TextProps) {
     const className = `sdui-text${align ? ` sdui-text-align-${align}` : ''}`;
     return <p {...props} className={className} />;
 }
