@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 
-    padding: var(--sd-spacing-p-3) 0;
+    padding: var(--sd-spacing-p-3) var(--sd-spacing-p-2);
     color: var(--sd-palette-text-inverted);
     width: 100%;
 }

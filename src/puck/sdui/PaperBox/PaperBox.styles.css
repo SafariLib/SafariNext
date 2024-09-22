@@ -1,0 +1,17 @@
+.sdui-paperbox {
+    padding: var(--sd-spacing-p-1);
+    background-color: var(--sd-palette-paper);
+    color: var(--sd-palette-text);
+
+    &.sdui-paperbox-primary {
+        box-shadow: .35rem .35rem 0 var(--sd-palette-primary);
+    }
+
+    &.sdui-paperbox-secondary {
+        box-shadow: .35rem .35rem 0 var(--sd-palette-secondary);
+    }
+
+    & .sdui-h3 {
+        color: var(--sd-palette-primary);
+    }
+}

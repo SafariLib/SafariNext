@@ -28,8 +28,7 @@
     }
 
     &.sdui-h3 {
-        font-size: 2.4rem;
-        font-family: var(--sd-font-heading);
+        font-size: 1.5rem;
     }
 
     &.sdui-link {

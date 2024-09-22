@@ -7,10 +7,12 @@ import Networks from './Networks/Networks';
 import Hero from './Hero/Hero';
 import Heading from './Text/Heading';
 import Image from './Image/Image';
+import PaperBox from './PaperBox/PaperBox';
 
 export const Sdui = Object.assign(
     {},
     {
+        PaperBox,
         Image,
         Hero,
         Networks,

@@ -19,7 +19,7 @@ export default function About() {
                         rounded
                     />
                 </Sdui.FlexContainer>
-                <Sdui.FlexContainer align="end" flex={2} className="about-text">
+                <Sdui.FlexContainer spacing="medium" align="end" flex={2} className="about-text">
                     <Sdui.Heading variant="h2">qui sommes-nous ?</Sdui.Heading>
                     <Sdui.Paragraph align="right">
                         Safari Digital est une agence de marketing digital dédiée à renforcer votre présence

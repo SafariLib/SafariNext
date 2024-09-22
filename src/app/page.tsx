@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Page } from '@/components';
+import { About, Offerings, Page } from '@/components';
 import { API_URL } from '@/config';
 import './styles.css';
 
@@ -14,6 +14,7 @@ export default async function Home() {
                 { link: '/contact', name: 'contact' },
             ]}>
             <About />
+            <Offerings />
         </Page>
     );
 }
