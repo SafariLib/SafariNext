@@ -1,0 +1,14 @@
+.sdui-logo {
+    position: relative;
+    align-self: center;
+    height: 48px;
+
+    & .sdui-logo-neon-img {
+        object-fit: none;
+        z-index: 0;
+        user-select: none;
+        position: absolute;
+        bottom: -112px;
+        left: -52px
+    }
+}

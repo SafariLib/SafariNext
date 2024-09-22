@@ -1,0 +1,36 @@
+.sdui-nav {
+    & .sdui-nav-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .sdui-nav-item-active a {
+        font-weight: 700;
+    }
+
+    & .sdui-nav-list-spacing-small {
+        gap: var(--sd-spacing-p-1);
+    }
+
+    & .sdui-nav-list-spacing-medium {
+        gap: var(--sd-spacing-p-2);
+    }
+
+    & .sdui-nav-list-spacing-large {
+        gap: var(--sd-spacing-p-3);
+    }
+
+    & .sdui-nav-list-row {
+        flex-direction: row;
+    }
+
+    & .sdui-nav-list-column {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

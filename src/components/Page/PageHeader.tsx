@@ -1,36 +1,19 @@
-'use client';
-
-import PageHeaderLogo from './PageHeaderLogo';
 import React from 'react';
+import PageHeaderLogo from './PageHeaderLogo';
+import type { PageNavItem } from './types';
+import { Sdui } from '@/puck/sdui';
 
 export interface PageHeaderProps {
-    paths: Array<{ link: string; name: string }>;
+    nav: PageNavItem[];
 }
 
 export default function PageHeader(props: PageHeaderProps) {
-    const [pathname, setPathname] = React.useState('');
-    React.useLayoutEffect(() => setPathname(window.location.pathname), []);
-
     return (
         <header className="sdui-page-header">
-            <div className="sdui-container">
+            <Sdui.FlexContainer align="center" justify="spaced" direction="row" fullWidth>
                 <PageHeaderLogo />
-                <nav className="sdui-page-header-nav">
-                    <ul>
-                        {props.paths.map(({ link, name }) => (
-                            <li
-                                key={name}
-                                className={
-                                    pathname === link ? 'sdui-nav-item sdui-nav-item-active' : 'sdui-nav-item'
-                                }>
-                                <a href={link} className="sdui-text sdui-link">
-                                    {name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
+                <Sdui.Nav nav={props.nav} direction="row" spacing="medium" />
+            </Sdui.FlexContainer>
         </header>
     );
 }

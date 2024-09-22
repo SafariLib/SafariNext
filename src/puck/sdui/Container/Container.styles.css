@@ -1,0 +1,56 @@
+.sdui-container {
+    width: 100%;
+    max-width: var(--sd-max-width);
+}
+
+.sdui-container-flex {
+    display: flex;
+}
+
+.sdui-container-flex-row {
+    flex-direction: row;
+}
+
+.sdui-container-flex-column {
+    flex-direction: column;
+}
+
+.sdui-container-justify-center {
+    justify-content: center;
+}
+
+.sdui-container-justify-spaced {
+    justify-content: space-between;
+}
+
+.sdui-container-justify-start {
+    justify-content: flex-start;
+}
+
+.sdui-container-justify-end {
+    justify-content: flex-end;
+}
+
+.sdui-container-align-center {
+    align-items: center;
+}
+
+.sdui-container-align-start {
+    align-items: flex-start;
+}
+
+.sdui-container-align-end {
+    align-items: flex-end;
+}
+
+.sdui-container-spacing-small {
+    gap: var(--sd-spacing-p-1);
+}
+
+.sdui-container-spacing-medium {
+    gap: var(--sd-spacing-p-2);
+}
+
+.sdui-container-spacing-large {
+    gap: var(--sd-spacing-p-3);
+}

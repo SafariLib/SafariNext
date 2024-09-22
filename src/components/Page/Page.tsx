@@ -1,14 +1,15 @@
 import type { PropsWithChildren } from 'react';
-import PageHeader, { type PageHeaderProps } from './PageHeader';
-import PageFooter, { type PageFooterProps } from '@/components/Page/PageFooter';
+import PageHeader from './PageHeader';
+import PageFooter from '@/components/Page/PageFooter';
+import type { PageCgu, PageNavItem } from '@/components/Page/types';
 
 export interface PageProps extends PropsWithChildren {
-    nav?: PageHeaderProps['paths'];
-    cgu: PageFooterProps['cgu'];
+    nav: PageNavItem[];
+    cgu: PageCgu;
     background?: string;
 }
 
-export default function Page({ children, cgu, nav, background }: PageProps) {
+export default function Page({ children, background, ...props }: PageProps) {
     return (
         <div className="sdui-page">
             {background ? (
@@ -16,10 +17,10 @@ export default function Page({ children, cgu, nav, background }: PageProps) {
                     <img src={background} alt="page wallpaper" />
                 </div>
             ) : null}
-            {nav ? <PageHeader paths={nav} /> : null}
+            <PageHeader {...props} />
             <main className="sdui-page-content">
                 {children}
-                <PageFooter cgu={cgu} />
+                <PageFooter {...props} />
             </main>
         </div>
     );

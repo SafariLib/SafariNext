@@ -1,28 +1,32 @@
-import PageFooterLogo from './PageFooterLogo';
+import { Sdui } from '@/puck/sdui';
+import type { PageNavItem } from './types';
 
 export interface PageFooterProps {
-    cgu: {
-        copyright: string;
-        link: string;
-        name: string;
-    };
+    nav: PageNavItem[];
 }
 
-export default function PageFooter({ cgu }: PageFooterProps) {
+export default function PageFooter({ nav }: PageFooterProps) {
     return (
         <footer className="sdui-page-footer">
-            <PageFooterLogo />
+            <Sdui.LogoNeon />
             <div className="sdui-page-footer-content">
-                <div className="sdui-container">
-                    <div className="sdui-page-footer-cgu">
-                        <div className="cgu-copyright">{cgu.copyright}</div>
-                        <div className="cgu-link">
-                            <a href={cgu.link} className="sdui-text sdui-link">
-                                {cgu.name}
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <Sdui.FlexContainer align="start" fullWidth>
+                    <Sdui.Paragraph>
+                        <span className="sdui-page-footer-catch">
+                            Votre boussole dans la jungle du numérique !
+                        </span>
+                    </Sdui.Paragraph>
+                </Sdui.FlexContainer>
+                <Sdui.FlexContainer direction="row" justify="spaced" align="end" fullWidth>
+                    <Sdui.Nav nav={nav} direction="column" />
+                    <Sdui.FlexContainer align="center">
+                        <Sdui.Paragraph>@safaridigital - 2024</Sdui.Paragraph>
+                        <Sdui.Link href="">
+                            <span className="sdui-page-footer-cgu">CGU/Mentions légales</span>
+                        </Sdui.Link>
+                    </Sdui.FlexContainer>
+                    <Sdui.Networks />
+                </Sdui.FlexContainer>
             </div>
         </footer>
     );
