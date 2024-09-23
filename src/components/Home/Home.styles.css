@@ -1,9 +1,17 @@
 .sdui-Home {
     position: relative;
-    height: 90vh;
+
+
+    @media (max-width: 760px) {
+    }
+
+    @media (min-width: 761px) {
+        height: 90vh;
+    }
 
     & .sdui-Home-hero {
         margin-top: calc(var(--sd-spacing-p-3) * 2);
+        margin-bottom: calc(var(--sd-spacing-p-3) * 2);
     }
 
     & .sdui-Home-par {
@@ -31,6 +39,18 @@
         }
     }
 
+    & .sdui-Home-img-mobile {
+        object-fit: cover;
+        box-shadow: .35rem .35rem 0 var(--sd-palette-secondary);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        display: none;
+
+        @media (max-width: 760px) {
+            display: block;
+        }
+    }
 
     & .sdui-Home-img {
 
@@ -64,7 +84,7 @@
             }
         }
         @media (max-width: 760px) {
-            /*display: none;*/
+            display: none;
         }
     }
 }
@@ -78,6 +98,10 @@
     bottom: calc(var(--sd-spacing-p-3) * 3);
     left: 0;
     right: 0;
+
+    @media (max-width: 760px) {
+        display: none;
+    }
 }
 
 @keyframes bounce {

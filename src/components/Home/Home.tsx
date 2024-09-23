@@ -15,6 +15,11 @@ export default function Home() {
                                 <Sdui.Heading variant="h2">
                                     Votre boussole dans la jungle du numérique
                                 </Sdui.Heading>
+                                <img
+                                    className="sdui-Home-img-mobile"
+                                    src={`${API_URL}218717111.jpg`}
+                                    alt="Illustration de personnes travaillant sur des écrans d'ordinateurs"
+                                />
                                 <div className="sdui-Home-par">
                                     <Sdui.Paragraph>
                                         Vous cherchez à développer votre activité sur le web, mais vous êtes

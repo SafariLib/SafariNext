@@ -5,6 +5,10 @@
     align-items: center;
 
     padding: var(--sd-spacing-p-3) var(--sd-spacing-p-2);
+    @media (max-width: 760px) {
+        padding: var(--sd-spacing-p-2) 0;
+    }
+
     color: var(--sd-palette-text-inverted);
     width: 100%;
 }

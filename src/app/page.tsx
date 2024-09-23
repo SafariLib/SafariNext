@@ -13,7 +13,7 @@ export default function Home() {
         <React.Fragment>
             <Page
                 setOpen={setOpen}
-                background={`${API_URL}safaridigital.fr.img.1917052874.png`}
+                background={`${API_URL}safaridigital.fr.img.1917052874-5.jpg`}
                 nav={[
                     { link: '#Home', name: 'accueil' },
                     { link: '#About', name: 'à propos' },

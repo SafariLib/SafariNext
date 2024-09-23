@@ -5,7 +5,11 @@ import './LogoNeon.styles.css';
 export default function LogoNeon() {
     return (
         <FlexContainer align="end" justify="spaced" className="sdui-logo" fullWidth>
-            <img className="sdui-logo-neon-img" src={`${API_URL}safaridigital.fr.logo.neon.png`} />
+            <img
+                className="sdui-logo-neon-img"
+                src={`${API_URL}safaridigital.fr.logo.neon.png`}
+                alt="Logo de l'application"
+            />
         </FlexContainer>
     );
 }
