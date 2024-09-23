@@ -9,6 +9,7 @@ import type { PageNavItem } from '@/components/Page/types';
 export interface PageProps extends PropsWithChildren {
     nav: PageNavItem[];
     background?: string;
+    setOpen: (open: boolean) => void;
 }
 
 export default function Page({ children, background, ...props }: PageProps) {

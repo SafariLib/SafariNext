@@ -3,7 +3,7 @@ import './Offerings.styles.css';
 
 export default function Offerings() {
     return (
-        <Sdui.Hero variant="secondary">
+        <Sdui.Hero variant="secondary" id="Offerings">
             <Sdui.FlexContainer spacing="large" fullWidth align="center">
                 <Sdui.Heading variant="h2">Nos prestations</Sdui.Heading>
                 <div className="sdui-grid">

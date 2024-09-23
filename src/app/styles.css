@@ -111,7 +111,12 @@ body {
         }
 
         & .sdui-page-footer-cgu {
-            font-size: 0.6rem;
+            border: none;
+            background-color: transparent;
+            color: var(--sd-palette-text-inverted);
+            font-family: var(--sd-font-text);
+            font-style: italic;
+            cursor: pointer;
         }
 
         & .sdui-container {
@@ -130,4 +135,47 @@ body {
             }
         }
     }
+}
+
+.sdui-dial-cgu {
+    position: absolute;
+    overflow: hidden;
+    width: 1200px;
+    height: 80vh;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0.8rem;
+    background-color: var(--sd-palette-paper);
+    color: var(--sd-palette-text);
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(24, 24, 24, 0.54) 2px 2px 8px;
+    z-index: 10;
+
+    .sdui-dial-cgu-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+}
+
+.sdui-dial-cgu-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.sdui-dial-cgu-back-open {
+    display: block;
 }

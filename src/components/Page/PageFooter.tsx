@@ -3,9 +3,10 @@ import type { PageNavItem } from './types';
 
 export interface PageFooterProps {
     nav: PageNavItem[];
+    setOpen: (open: boolean) => void;
 }
 
-export default function PageFooter({ nav }: PageFooterProps) {
+export default function PageFooter({ nav, setOpen }: PageFooterProps) {
     return (
         <footer className="sdui-page-footer">
             <Sdui.LogoNeon />
@@ -26,9 +27,9 @@ export default function PageFooter({ nav }: PageFooterProps) {
                     <Sdui.Nav nav={nav} direction="column" />
                     <Sdui.FlexContainer align="center">
                         <Sdui.Paragraph>@safaridigital - 2024</Sdui.Paragraph>
-                        <Sdui.Link href="">
-                            <span className="sdui-page-footer-cgu">CGU/Mentions légales</span>
-                        </Sdui.Link>
+                        <button className="sdui-page-footer-cgu" onClick={() => setOpen(true)}>
+                            CGU/Mentions légales
+                        </button>
                     </Sdui.FlexContainer>
                     <Sdui.Networks />
                 </Sdui.FlexContainer>

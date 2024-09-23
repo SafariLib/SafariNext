@@ -4,7 +4,7 @@ import './About.styles.css';
 
 export default function About() {
     return (
-        <Sdui.Hero>
+        <Sdui.Hero id="About">
             <Sdui.FlexContainer
                 direction="row"
                 align="center"

@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react';
+import React from 'react';
 import './Text.styles.css';
 
 interface LinkProps extends PropsWithChildren {
@@ -6,5 +7,18 @@ interface LinkProps extends PropsWithChildren {
 }
 
 export default function Link(props: LinkProps) {
-    return <a {...props} className="sdui-text sdui-link" />;
+    const onClick = React.useCallback(
+        (e: React.MouseEvent<HTMLAnchorElement>) => {
+            if (props.href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(props.href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        },
+        [props.href],
+    );
+
+    return <a {...props} onClick={onClick} className="sdui-text sdui-link" />;
 }
