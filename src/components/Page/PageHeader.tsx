@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHeaderLogo from './PageHeaderLogo';
 import type { PageNavItem } from './types';
-import { Sdui } from '@/puck/sdui';
+import { Sdui } from '../../puck/sdui';
 
 export interface PageHeaderProps {
     nav: PageNavItem[];

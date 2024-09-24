@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { About, Home as HomeHero, Offerings, Page } from '@/components';
-import { API_URL } from '@/config';
-import { Sdui } from '@/puck/sdui';
+import { About, Home as HomeHero, Offerings, Page } from '../components';
+import { API_URL } from '../config';
+import { Sdui } from '../puck/sdui';
 import './styles.css';
 
 export default function Home() {

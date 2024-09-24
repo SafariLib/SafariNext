@@ -1,6 +1,6 @@
 import React from 'react';
-import { Sdui } from '@/puck/sdui';
-import { API_URL } from '@/config';
+import { Sdui } from '../../puck/sdui';
+import { API_URL } from '../../config';
 import './Home.styles.css';
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import { Sdui } from '@/puck/sdui';
+import { Sdui } from '../../puck/sdui';
 import './Offerings.styles.css';
 
 export default function Offerings() {

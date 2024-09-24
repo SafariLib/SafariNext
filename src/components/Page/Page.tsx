@@ -3,8 +3,8 @@
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import PageHeader from './PageHeader';
-import PageFooter from '@/components/Page/PageFooter';
-import type { PageNavItem } from '@/components/Page/types';
+import PageFooter from '../../components/Page/PageFooter';
+import type { PageNavItem } from '../../components/Page/types';
 
 export interface PageProps extends PropsWithChildren {
     nav: PageNavItem[];

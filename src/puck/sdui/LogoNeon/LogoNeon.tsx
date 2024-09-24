@@ -1,4 +1,4 @@
-import { API_URL } from '@/config';
+import { API_URL } from '../../../config';
 import { FlexContainer } from '../Container/Container';
 import './LogoNeon.styles.css';
 

@@ -1,4 +1,4 @@
-import { Sdui } from '@/puck/sdui';
+import { Sdui } from '../../puck/sdui';
 import type { PageNavItem } from './types';
 
 export interface PageFooterProps {

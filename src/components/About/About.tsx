@@ -1,5 +1,5 @@
-import { Sdui } from '@/puck/sdui';
-import { API_URL } from '@/config';
+import { Sdui } from '../../puck/sdui';
+import { API_URL } from '../../config';
 import './About.styles.css';
 
 export default function About() {
