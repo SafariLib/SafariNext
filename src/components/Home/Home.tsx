@@ -4,6 +4,9 @@ import { API_URL } from '../../config';
 import './Home.styles.css';
 
 export default function Home() {
+    const handleScroll = () => {
+        document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' });
+    };
     return (
         <React.Fragment>
             <div id="Home" />
@@ -23,11 +26,11 @@ export default function Home() {
                                 <div className="sdui-Home-par">
                                     <Sdui.Paragraph>
                                         Vous cherchez à développer votre activité sur le web, mais vous êtes
-                                        perdu face à tous les outils disponibles ? Safari Digital vous
+                                        perdus face à tous les outils disponibles ? Safari Digital vous
                                         accompagne dans cette nouvelle aventure.
                                     </Sdui.Paragraph>
                                     <Sdui.Paragraph>
-                                        Stratégie marketing, création de contenus, emailing, Comunity
+                                        Stratégie marketing, création de contenus, emailing, Community
                                         management, SEO, Google Ads... Nous mettons notre expertise au profit
                                         de votre projet.
                                     </Sdui.Paragraph>
@@ -60,7 +63,7 @@ export default function Home() {
                         </Sdui.FlexContainer>
                     </Sdui.Hero>
                 </div>
-                <div className="sdui-page-scroll">
+                <div className="sdui-page-scroll" onClick={handleScroll}>
                     <svg
                         width="48"
                         height="48"

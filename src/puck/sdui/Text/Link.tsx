@@ -4,6 +4,7 @@ import './Text.styles.css';
 
 interface LinkProps extends PropsWithChildren {
     href: string;
+    className?: string;
 }
 
 export default function Link(props: LinkProps) {
@@ -20,5 +21,11 @@ export default function Link(props: LinkProps) {
         [props.href],
     );
 
-    return <a {...props} onClick={onClick} className="sdui-text sdui-link" />;
+    return (
+        <a
+            {...props}
+            onClick={onClick}
+            className={`sdui-text sdui-link${props.className ? ' ' + props.className : ''}`}
+        />
+    );
 }

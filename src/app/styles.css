@@ -85,6 +85,26 @@ body {
             height: 65px;
         }
     }
+
+    & .sdui-page-header-contact-mobile {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        right: 1rem;
+        background-color: var(--sd-palette-secondary);
+        padding: .8rem 1rem;
+        border-radius: 100%;
+
+        @media (max-width: 768px) {
+            display: block;
+            scale: 1.2;
+        }
+
+        @media (max-width: 410px) {
+            scale: 1;
+            top: 4rem;
+        }
+    }
 }
 
 .sdui-page-footer {
