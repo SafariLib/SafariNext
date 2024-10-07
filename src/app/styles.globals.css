@@ -1,8 +1,17 @@
 :root {
+    --max-width: 100%;
+
+    --spacing-1: 15px;
+    --spacing-2: 25px;
+    --spacing-3: 50px;
+    --spacing-4: 100px;
+    --spacing-5: 150px;
+
     --sd-max-width: 100%;
     --sd-spacing-p-1: 15px;
     --sd-spacing-p-2: 25px;
     --sd-spacing-p-3: 50px;
+
 }
 
 @media screen and (min-width: 780px) {
@@ -155,47 +164,4 @@ body {
             }
         }
     }
-}
-
-.sdui-dial-cgu {
-    position: absolute;
-    overflow: hidden;
-    width: 1200px;
-    height: 80vh;
-    padding: 25px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 0.8rem;
-    background-color: var(--sd-palette-paper);
-    color: var(--sd-palette-text);
-    border-radius: 15px;
-    border: none;
-    box-shadow: rgba(24, 24, 24, 0.54) 2px 2px 8px;
-    z-index: 10;
-
-    .sdui-dial-cgu-content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-    }
-}
-
-.sdui-dial-cgu-back {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9;
-    display: none;
-}
-
-.sdui-dial-cgu-back-open {
-    display: block;
 }

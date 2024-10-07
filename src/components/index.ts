@@ -1,4 +1,8 @@
 export { default as Page } from './Page/Page';
-export { default as About } from './About/About';
 export { default as Offerings } from './Offerings/Offerings';
-export { default as Home } from './Home/Home';
+
+export * from './Box';
+export * from './Text';
+export * from './Hero';
+export * from './CGUDialog';
+export * from './Scroller';

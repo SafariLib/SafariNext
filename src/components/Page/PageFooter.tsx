@@ -1,12 +1,14 @@
+'use client';
+
 import { Sdui } from '../../puck/sdui';
+import { setCGUDialogOpen } from '../CGUDialog/CGUDialog';
 import type { PageNavItem } from './types';
 
 export interface PageFooterProps {
     nav: PageNavItem[];
-    setOpen: (open: boolean) => void;
 }
 
-export default function PageFooter({ nav, setOpen }: PageFooterProps) {
+export default function PageFooter({ nav }: PageFooterProps) {
     return (
         <footer className="sdui-page-footer">
             <Sdui.LogoNeon />
@@ -27,7 +29,7 @@ export default function PageFooter({ nav, setOpen }: PageFooterProps) {
                     <Sdui.Nav nav={nav} direction="column" />
                     <Sdui.FlexContainer align="center">
                         <Sdui.Paragraph>@safaridigital - 2024</Sdui.Paragraph>
-                        <button className="sdui-page-footer-cgu" onClick={() => setOpen(true)}>
+                        <button className="sdui-page-footer-cgu" onClick={() => setCGUDialogOpen(true)}>
                             CGU/Mentions légales
                         </button>
                     </Sdui.FlexContainer>

@@ -1,5 +1,3 @@
-'use client';
-
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import PageHeader from './PageHeader';
@@ -9,7 +7,6 @@ import type { PageNavItem } from '../../components/Page/types';
 export interface PageProps extends PropsWithChildren {
     nav: PageNavItem[];
     background?: string;
-    setOpen: (open: boolean) => void;
 }
 
 export default function Page({ children, background, ...props }: PageProps) {

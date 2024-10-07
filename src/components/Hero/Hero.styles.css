@@ -1,0 +1,26 @@
+.Sdui-Hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--sd-spacing-p-3) var(--sd-spacing-p-2);
+    @media (max-width: 760px) {
+        padding: var(--sd-spacing-p-2) 0;
+    }
+
+    color: var(--sd-palette-text-inverted);
+    width: 100%;
+
+    & .Sdui-Box-container {
+        align-self: center;
+    }
+}
+
+.Sdui-Hero-variant-primary {
+    background-color: var(--sd-palette-primary);
+}
+
+.Sdui-Hero-variant-secondary {
+    background-color: var(--sd-palette-secondary);
+}
