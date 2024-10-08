@@ -4,7 +4,7 @@ import type { PropsWithChildren } from 'react';
 import React from 'react';
 import './Text.styles.css';
 
-interface LinkProps extends PropsWithChildren {
+export interface LinkProps extends PropsWithChildren {
     href: string;
     className?: string;
 }
@@ -27,7 +27,7 @@ export default function Link(props: LinkProps) {
         <a
             {...props}
             onClick={onClick}
-            className={`sdui-text sdui-link${props.className ? ' ' + props.className : ''}`}
+            className={`Sdui-Text Sdui-Link${props.className ? ' ' + props.className : ''}`}
         />
     );
 }

@@ -1,0 +1,32 @@
+.Sdui-Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Sdui-Grid-gap-1 {
+    grid-gap: var(--spacing-1);
+}
+
+.Sdui-Grid-gap-2 {
+    grid-gap: var(--spacing-2);;
+}
+
+.Sdui-Grid-gap-3 {
+    grid-gap: var(--spacing-3);
+}
+
+.Sdui-Grid-gap-4 {
+    grid-gap: var(--spacing-4);
+}
+
+.Sdui-Grid-gap-5 {
+    grid-gap: var(--spacing-5);
+}

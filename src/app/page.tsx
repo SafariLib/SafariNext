@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, CGUDialog, Heading, Hero, Offerings, Page, Paragraph, Scroller } from '../components';
+import { Box, CGUDialog, Grid, Heading, Hero, Page, PaperBox, Paragraph, Scroller } from '../components';
 import { homePageContent } from './page.content';
 import './styles.theme.light.css';
 import './styles.globals.css';
@@ -64,7 +64,18 @@ export default function Home() {
                         </Box>
                     </Box>
                 </Hero>
-                <Offerings />
+                <Hero variant="secondary" id="Offerings">
+                    <Box gap={3} align="center" fullWidth>
+                        <Heading variant="h2">{homePageContent.offerings.heading}</Heading>
+                        <Grid gap={2}>
+                            {homePageContent.offerings.items.map(({ content, ...itemProps }, i) => (
+                                <React.Fragment key={i}>
+                                    <PaperBox {...itemProps}>{content}</PaperBox>
+                                </React.Fragment>
+                            ))}
+                        </Grid>
+                    </Box>
+                </Hero>
             </Page>
             <CGUDialog />
         </React.Fragment>

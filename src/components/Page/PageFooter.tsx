@@ -1,8 +1,12 @@
 'use client';
 
-import { Sdui } from '../../puck/sdui';
 import { setCGUDialogOpen } from '../CGUDialog/CGUDialog';
 import type { PageNavItem } from './types';
+import { Box } from '../Box';
+import { Paragraph } from '../Text';
+import Networks from './components/Networks/Networks';
+import Nav from './components/Navigation/Navigation';
+import LogoNeon from './components/LogoNeon/LogoNeon';
 
 export interface PageFooterProps {
     nav: PageNavItem[];
@@ -11,30 +15,30 @@ export interface PageFooterProps {
 export default function PageFooter({ nav }: PageFooterProps) {
     return (
         <footer className="sdui-page-footer">
-            <Sdui.LogoNeon />
+            <LogoNeon />
             <div className="sdui-page-footer-content">
-                <Sdui.FlexContainer align="start" fullWidth>
-                    <Sdui.Paragraph>
+                <Box align="start" fullWidth>
+                    <Paragraph>
                         <span className="sdui-page-footer-catch">
                             Votre boussole dans la jungle du numérique !
                         </span>
-                    </Sdui.Paragraph>
-                </Sdui.FlexContainer>
-                <Sdui.FlexContainer
+                    </Paragraph>
+                </Box>
+                <Box
                     direction="row"
-                    justify="spaced"
+                    justify="space-between"
                     align="end"
                     fullWidth
                     className="sdui-page-footer-content-actions">
-                    <Sdui.Nav nav={nav} direction="column" />
-                    <Sdui.FlexContainer align="center">
-                        <Sdui.Paragraph>@safaridigital - 2024</Sdui.Paragraph>
+                    <Nav nav={nav} direction="column" />
+                    <Box align="center">
+                        <Paragraph>@safaridigital - 2024</Paragraph>
                         <button className="sdui-page-footer-cgu" onClick={() => setCGUDialogOpen(true)}>
                             CGU/Mentions légales
                         </button>
-                    </Sdui.FlexContainer>
-                    <Sdui.Networks />
-                </Sdui.FlexContainer>
+                    </Box>
+                    <Networks />
+                </Box>
             </div>
         </footer>
     );

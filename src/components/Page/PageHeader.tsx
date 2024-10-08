@@ -1,8 +1,9 @@
 import React from 'react';
 import PageHeaderLogo from './PageHeaderLogo';
 import type { PageNavItem } from './types';
-import { Sdui } from '../../puck/sdui';
-import Link from '../../puck/sdui/Text/Link';
+import { Box } from '../Box';
+import { Link } from '../Text';
+import Nav from './components/Navigation/Navigation';
 
 export interface PageHeaderProps {
     nav: PageNavItem[];
@@ -11,10 +12,10 @@ export interface PageHeaderProps {
 export default function PageHeader(props: PageHeaderProps) {
     return (
         <header className="sdui-page-header">
-            <Sdui.FlexContainer align="center" justify="spaced" direction="row" fullWidth>
+            <Box align="center" justify="space-between" direction="row" fullWidth>
                 <PageHeaderLogo />
-                <Sdui.Nav nav={props.nav} direction="row" spacing="medium" />
-            </Sdui.FlexContainer>
+                <Nav nav={props.nav} direction="row" spacing="medium" />
+            </Box>
             <Link href="mailto:safari.digital.web@gmail.com" className="sdui-page-header-contact-mobile">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

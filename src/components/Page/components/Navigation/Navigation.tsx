@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './Navigation.styles.css';
-import Link from '../Text/Link';
+import { Link } from '../../../Text';
 
 interface NavigationProps {
     nav: { link: string; name: string }[];
