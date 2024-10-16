@@ -1,5 +1,6 @@
 import { type Metadata } from 'next';
 import { type PropsWithChildren } from 'react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { APP_DOMAIN, APP_NAME, validateEnv } from '../config';
 import { neoneon } from './fonts';
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
                 <meta property="og:image" content="https://safaridigital.fr/opengraph.jpg" />
             </head>
             <body className={neoneon.variable}>{children}</body>
+            <GoogleAnalytics gaId="G-S3ZDR6BPY2" />
         </html>
     );
 }
