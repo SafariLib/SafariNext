@@ -5,6 +5,7 @@ import React from 'react';
 type Size = null | 0 | 1 | 2 | 3 | 4 | 5;
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
+    position?: 'absolute' | 'relative' | 'fixed' | 'sticky';
     p?: Size;
     pt?: Size;
     pb?: Size;

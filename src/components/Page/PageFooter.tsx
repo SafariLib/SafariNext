@@ -7,6 +7,7 @@ import { Paragraph } from '../Text';
 import Networks from './components/Networks/Networks';
 import Nav from './components/Navigation/Navigation';
 import LogoNeon from './components/LogoNeon/LogoNeon';
+import React from 'react';
 
 export interface PageFooterProps {
     nav: PageNavItem[];
@@ -36,6 +37,7 @@ export default function PageFooter({ nav }: PageFooterProps) {
                         <button className="sdui-page-footer-cgu" onClick={() => setCGUDialogOpen(true)}>
                             CGU/Mentions légales
                         </button>
+                        <Paragraph caption>Crédit photo: ©Benjamin Hincker</Paragraph>
                     </Box>
                     <Networks />
                 </Box>

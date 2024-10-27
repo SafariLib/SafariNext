@@ -78,6 +78,8 @@ export const actionKeywords = [
 ];
 
 export const booleanKeywords = [
+    'caption',
+    'isCaption',
     'isLoading',
     'loading',
     'isPending',

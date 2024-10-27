@@ -55,7 +55,7 @@ export const homePageContent = {
             },
         ],
         image: {
-            src: '/16333472852681.jpg',
+            src: '/48565416354.jpg',
             alt: "Portrait de l'auteur",
         },
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, CGUDialog, Grid, Heading, Hero, Page, PaperBox, Paragraph, Scroller } from '../components';
+import { Analytics } from '../analytics';
 import { homePageContent } from './page.content';
 import './styles.theme.light.css';
 import './styles.globals.css';
@@ -56,6 +57,7 @@ export default function Home() {
                         <Box className="About-Hero-Portrait" flex={1}>
                             <img {...homePageContent.about.image} />
                         </Box>
+
                         <Box className="About-Hero-Content" gap={2} flex={2} align="end">
                             <Heading variant="h2">{homePageContent.about.heading}</Heading>
                             {homePageContent.about.paragraphs.map((paragraph, index) => (
@@ -77,6 +79,7 @@ export default function Home() {
                     </Box>
                 </Hero>
             </Page>
+            <Analytics />
             <CGUDialog />
         </React.Fragment>
     );

@@ -148,6 +148,11 @@ body {
             cursor: pointer;
         }
 
+        & .Sdui-Text-caption {
+            margin-top: .25rem;
+            font-style: italic;
+        }
+
         & .sdui-container {
             z-index: 1;
         }

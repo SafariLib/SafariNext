@@ -4,6 +4,7 @@ import { ClassName } from '../../utils';
 
 export interface ParagraphProps extends PropsWithChildren {
     align?: 'left' | 'center' | 'right';
+    caption?: boolean;
 }
 
 export default function Paragraph(props: ParagraphProps) {

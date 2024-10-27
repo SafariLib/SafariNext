@@ -5,6 +5,11 @@
     letter-spacing: .045rem;
     margin: 0;
 
+    &.Sdui-Text-caption {
+        font-size: .75rem;
+        font-weight: 300;
+    }
+
     &.Sdui-Text-align-center {
         text-align: center;
     }
