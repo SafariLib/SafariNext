@@ -1,0 +1,1 @@
+export { default as JsUmdInterpreter } from './JsInterpretor/JsUmdInterpreter';
