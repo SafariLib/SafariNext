@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-    <em>safaridigital.fr</em>
+    <em>digital-client</em>
 </p>
 
 ---
@@ -16,5 +16,5 @@
 
 ***"NEXT_" Prefixed variables are public and can be accessed on the client side.***
 ```
-NEXT_PUBLIC_API_URL="string"
+DIGITAL_API_URL="string"
 ```

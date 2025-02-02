@@ -26,12 +26,19 @@
             {
                 "name": "next"
             }
-        ]
+        ],
+        "paths": {
+            "@/*": ["src/*"],
+            "@digital-lib/*": ["packages/digital-lib/packages/*"],
+        }
     },
     "include": [
         "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "packages/digital-lib/packages/core/*",
+        "packages/digital-lib/packages/next-scripts/*",
+        "packages/digital-lib/packages/react-digital-puck/library",
         ".next/types/**/*.ts"
     ],
     "exclude": [

@@ -1,8 +1,8 @@
 'use client';
 
-import type { Data } from '@measured/puck';
-import { Render } from '@measured/puck';
+import  { Render, type Data } from '@measured/puck';
+import { config } from '@digital-lib/react-digital-puck/library';
 
-export function Client({ config, ...props }: { data: Data, config: string }) {
-    return <Render {...props} config={eval(config)} />;
+export function Client(props: { data: Data }) {
+    return <Render {...props} config={config}/>;
 }

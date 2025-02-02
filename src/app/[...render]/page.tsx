@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { Data } from '@measured/puck';
 import { Client } from './client';
-import { notFound } from 'next/navigation';
-import { DigitalApiClient } from '../../modules';
+import { DigitalApi } from '../../http';
 
 interface RenderParams {
     params: Promise<{ render: string[] }>;
@@ -11,7 +11,7 @@ interface RenderParams {
 async function getView(params: RenderParams['params']): Promise<Data | undefined> {
     const { render = [] } = await params;
     const path = `${render.join('/')}`;
-    const result = await DigitalApiClient.getView(path);
+    const result = await DigitalApi.getView(path);
     return result ? JSON.parse(result) : undefined;
 }
 
@@ -22,9 +22,7 @@ export async function generateMetadata({ params }: RenderParams): Promise<Metada
 
 export default async function Page({ params }: RenderParams) {
     const data = await getView(params);
-    const config = await DigitalApiClient.getRawConfig();
-    console.log(data, config);
-    return (data && config) ? <Client data={data} config={config} /> : notFound();
+    return data ? <Client data={data} /> : notFound();
 }
 
 // Force Next.js to produce static pages: https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
