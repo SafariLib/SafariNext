@@ -12,11 +12,26 @@ _@digital-net-org/digital-client_
 
 Client App that renders pages from the Digital-puck application using Puck library.
 
-## Usage
+## :memo: Configuration
 
-### Environment variables
+You can configurate the application using environment variables and volume while mounting the docker image.
+
+### :whale2: Dockerfile
+
+#### Override public assets
+
+Create a [_volume_](https://docs.docker.com/engine/storage/volumes/) in the container and access path `/app/public`. You can replace the following files from here:
+
+| File          | Type | Description          |
+| ------------- | ---- | -------------------- |
+| `favicon.ico` | Icon | The website Favicon. |
+
+#### Environment variables
 
 | Variable               | Type   | Description                                                                    |
 | ---------------------- | ------ | ------------------------------------------------------------------------------ |
 | `DIGITAL_API_URL`      | string | The base URL of the Digital API.                                               |
 | `PUCK_CONFIG_ENDPOINT` | string | The filename of the configuration javascript file (must be a CommonJS module). |
+| `META_TITLE`           | string | The website metadata: Title.                                                   |
+| `META_DESC`            | string | The website metadata: Description.                                             |
+| `META_URL`             | string | The website metadata: Url.                                                     |
