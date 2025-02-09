@@ -13,13 +13,13 @@
     "@next/third-parties": "15.1.5",
     "axios": "latest",
     "next": "15.1.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
     "@types/node": "22.10.6",
-    "@types/react": "19.0.6",
-    "@types/react-dom": "19.0.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "digital-lint": "github:digital-net-org/lint#1.0.0",

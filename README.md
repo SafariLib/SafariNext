@@ -8,13 +8,15 @@
     <a href="https://puckeditor.com/"><img src="https://img.shields.io/badge/Puck-black.svg?color=111111"></a>
 </div>
 
-*@digital-net-org/digital-client*
+_@digital-net-org/digital-client_
 
 Client App that renders pages from the Digital-puck application using Puck library.
 
 ## Usage
 
 ### Environment variables
-```
-DIGITAL_API_URL="string"
-```
+
+| Variable               | Type   | Description                                                                    |
+| ---------------------- | ------ | ------------------------------------------------------------------------------ |
+| `DIGITAL_API_URL`      | string | The base URL of the Digital API.                                               |
+| `PUCK_CONFIG_ENDPOINT` | string | The filename of the configuration javascript file (must be a CommonJS module). |

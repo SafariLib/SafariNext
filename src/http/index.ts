@@ -1,1 +1,1 @@
-export { default as DigitalApi } from './DigitalApi/DigitalApiClient';
+export { default as DigitalApi } from './DigitalApi/DigitalApi';

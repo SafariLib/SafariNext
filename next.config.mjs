@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 
+['DIGITAL_API_URL', 'PUCK_CONFIG_ENDPOINT'].forEach(env => {
+    if (!process.env[env] || process.env[env] === '') {
+        throw new Error(`Mandatory variable ${env} is not set.`);
+    }
+});
+
 const nextConfig = {
     output: 'standalone',
-    env: {
-        DIGITAL_API_URL: process.env.DIGITAL_API_URL,
-    },
-    webpack: (config) => {
+    webpack: config => {
         config.module.rules.push({
             test: /packages\\digital-lib\\packages\/.*/,
             loader: 'ignore-loader',
@@ -13,11 +16,12 @@ const nextConfig = {
         return config;
     },
     eslint: {
-        ignoreDuringBuilds: true
+        ignoreDuringBuilds: true,
     },
     typescript: {
+        // TODO: find a way to ignore specific folders
         ignoreBuildErrors: true,
-      },
+    },
 };
 
 export default nextConfig;

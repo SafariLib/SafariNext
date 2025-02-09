@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "moduleResolution": "bundler",
         "module": "ESNext",
         "target": "ES2020",
@@ -20,7 +21,6 @@
         "allowJs": true,
         "skipLibCheck": true,
         "jsx": "preserve",
-        "declaration": false,
         "strict": true,
         "plugins": [
             {
@@ -28,8 +28,7 @@
             }
         ],
         "paths": {
-            "@/*": ["src/*"],
-            "@digital-lib/*": ["packages/digital-lib/packages/*"],
+            "@digital-lib/*": ["packages/digital-lib/packages/*"]
         }
     },
     "include": [
@@ -37,11 +36,9 @@
         "src/**/*.ts",
         "src/**/*.tsx",
         "packages/digital-lib/packages/core/*",
+        "packages/digital-lib/packages/dto/*",
         "packages/digital-lib/packages/next-scripts/*",
-        "packages/digital-lib/packages/react-digital-puck/library",
         ".next/types/**/*.ts"
     ],
-    "exclude": [
-        "node_modules"
-    ]
+    "exclude": ["node_modules"]
 }

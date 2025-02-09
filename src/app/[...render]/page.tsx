@@ -1,7 +1,6 @@
+import { Render, type Data } from '@measured/puck';
 import { type Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Data } from '@measured/puck';
-import { Client } from './client';
 import { DigitalApi } from '../../http';
 
 interface RenderParams {
@@ -22,9 +21,8 @@ export async function generateMetadata({ params }: RenderParams): Promise<Metada
 
 export default async function Page({ params }: RenderParams) {
     const data = await getView(params);
-    return data ? <Client data={data} /> : notFound();
+    const config = await DigitalApi.getViewConfig();
+    return data ? <Render data={data} config={config} /> : notFound();
 }
 
-// Force Next.js to produce static pages: https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-// Delete this if you need dynamic rendering, such as access to headers or cookies
 export const dynamic = 'force-static';
