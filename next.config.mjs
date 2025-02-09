@@ -3,7 +3,7 @@
 const nextConfig = {
     output: 'standalone',
     env: {
-        NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+        DIGITAL_API_URL: process.env.DIGITAL_API_URL,
     },
     webpack: (config) => {
         config.module.rules.push({

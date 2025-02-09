@@ -2,7 +2,7 @@ FROM node:22-slim
 
 ENV NODE_ENV "production"
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV NEXT_PUBLIC_API_URL "https://api.safaridigital.fr/"
+ENV DIGITAL_API_URL "https://api.safaridigital.fr/"
 
 WORKDIR /app
 COPY . .

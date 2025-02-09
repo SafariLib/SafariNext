@@ -1,20 +1,20 @@
-<p align="center">
-    <img width="300" src=".assets/logo-v1_full.svg">
-</p>
-<div align="center">
-    <a href="https://github.com/safari-digital"><img src="https://img.shields.io/badge/safari-digital-green.svg"></a>
-    <a href="https://nextjs.org/docs"><img src="https://img.shields.io/badge/NextJS-14-black.svg"></a>
+<h1>
+    <img width="300" src="https://raw.githubusercontent.com/digital-net-org/.github/refs/heads/master/assets/logo_v2025.svg">
+</h1>
+<div justify="center">
+    <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-blue.svg?color=1d63ed"></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/Typescript-blue.svg?color=3178c6"></a>
+    <a href="https://nextjs.org/docs"><img src="https://img.shields.io/badge/NextJS-black.svg"></a>
+    <a href="https://puckeditor.com/"><img src="https://img.shields.io/badge/Puck-black.svg?color=111111"></a>
 </div>
 
-<p align="center">
-    <em>digital-client</em>
-</p>
+*@digital-net-org/digital-client*
 
----
+Client App that renders pages from the Digital-puck application using Puck library.
 
-#### Environment variables
+## Usage
 
-***"NEXT_" Prefixed variables are public and can be accessed on the client side.***
+### Environment variables
 ```
 DIGITAL_API_URL="string"
 ```
