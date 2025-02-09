@@ -9,18 +9,17 @@ export default class DigitalApi {
         return result?.status === 200 ? result?.data?.data : undefined;
     }
 
-    public static async getViewConfig() {
+    public static async getViewConfig(): Promise<Config | undefined> {
         const endpoint = process.env.PUCK_CONFIG_ENDPOINT ?? '';
         const result = await digitalApiInstance.get(endpoint, {
             headers: {
                 Accept: 'application/javascript',
             },
         });
-        console.log(result);
         const config = JsInterpreter.readCjs<Config>(result?.data);
 
         if (result?.status !== 200 || !config) {
-            throw new Error(`Could not get Puck config from: ${endpoint}`);
+            console.log(`Could not get Puck config from: ${endpoint}`);
         }
 
         return config;

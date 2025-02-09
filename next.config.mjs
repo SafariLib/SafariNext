@@ -1,11 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-['DIGITAL_API_URL', 'PUCK_CONFIG_ENDPOINT', 'META_TITLE', 'META_DESC', 'META_URL'].forEach(env => {
-    if (!process.env[env] || process.env[env] === '') {
-        throw new Error(`Mandatory variable ${env} is not set.`);
-    }
-});
-
 const nextConfig = {
     output: 'standalone',
     webpack: config => {

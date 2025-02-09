@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: RenderParams): Promise<Metada
 export default async function Page({ params }: RenderParams) {
     const data = await getView(params);
     const config = await DigitalApi.getViewConfig();
-    return data ? <Render data={data} config={config} /> : notFound();
+    return data && config ? <Render data={data} config={config} /> : notFound();
 }
 
 export const dynamic = 'force-static';
